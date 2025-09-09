@@ -1,8 +1,18 @@
 # 🌐 NovaTech - Site Web Officiel
 
 Site web professionnel pour **NovaTech**, startup innovante spécialisée dans les solutions digitales, le développement web, les applications mobiles et les solutions cloud.
+Site web professionnel pour **NovaTech**, startup innovante spécialisée dans les solutions digitales, le développement web, les applications mobiles et les solutions cloud.
 
 ## 📋 Table des matières
+
+* [Pages disponibles](#-pages-disponibles)
+* [Déploiement sur GitHub Pages](#-déploiement-sur-github-pages)
+* [Scripts Python](#-scripts-python)
+* [Structure du projet](#-structure-du-projet)
+* [Contributions](#-contributions)
+* [Licence](#-licence)
+
+---
 
 * [Pages disponibles](#-pages-disponibles)
 * [Déploiement sur GitHub Pages](#-déploiement-sur-github-pages)
@@ -26,6 +36,17 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
 | **legal.html**      | Mentions légales et politique de confidentialité        |
 
 ---
+| Page                | Description                                             |
+| ------------------- | ------------------------------------------------------- |
+| **index.html**      | Page d’accueil avec présentation et services principaux |
+| **services.html**   | Détails des services avec grille tarifaire              |
+| **calculator.html** | Calculateur interactif de devis                         |
+| **blog.html**       | Articles et actualités avec système de filtrage         |
+| **about.html**      | À propos de l’entreprise et de l’équipe                 |
+| **contact.html**    | Formulaire de contact et coordonnées                    |
+| **legal.html**      | Mentions légales et politique de confidentialité        |
+
+---
 
 ## 🚀 Déploiement sur GitHub Pages
 
@@ -34,10 +55,18 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
 * Compte GitHub
 * Git installé localement
 * Navigateur web moderne
+### ✅ Prérequis
+
+* Compte GitHub
+* Git installé localement
+* Navigateur web moderne
+
+### ⚙️ Étapes de déploiement
 
 ### ⚙️ Étapes de déploiement
 
 1. **Cloner le repository**
+
 
    ```bash
    git clone https://github.com/votre-username/novatech-website.git
@@ -48,6 +77,8 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
 
    * Copier tous les fichiers HTML, CSS, JS et assets dans le dossier cloné.
 
+   * Copier tous les fichiers HTML, CSS, JS et assets dans le dossier cloné.
+
 3. **Configurer GitHub Pages**
 
    * Aller dans **Settings → Pages**
@@ -55,7 +86,15 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
    * Choisir la branche `main` et le dossier `/root`
    * Sauvegarder
 
+   * Aller dans **Settings → Pages**
+   * Sélectionner **Deploy from a branch**
+   * Choisir la branche `main` et le dossier `/root`
+   * Sauvegarder
+
 4. **Accéder au site**
+
+   * Votre site sera disponible à l’adresse :
+
 
    * Votre site sera disponible à l’adresse :
 
@@ -67,13 +106,19 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
 
 ---
 
+   *(Le déploiement est généralement actif sous 1 à 2 minutes.)*
+
+---
+
 ## 🐍 Scripts Python
 
 ### 📊 Calculateur de Devis
 
+
 **Fichier :** `scripts/calculateur_novatech.py`
 
 **Utilisation :**
+
 
 ```bash
 cd scripts
@@ -92,7 +137,18 @@ python calculateur_novatech.py
   * Options SEO
 * Application automatique de remises
 
+* Calcul automatique des coûts de projet
+* Prise en compte de plusieurs paramètres :
+
+  * Type de projet
+  * Nombre de pages
+  * Niveau de design
+  * Fonctionnalités supplémentaires
+  * Options SEO
+* Application automatique de remises
+
 **Exemple de sortie :**
+
 
 ```
 ==================================================
@@ -110,17 +166,22 @@ TOTAL:                 3100€
 
 ---
 
+---
+
 ### 🔐 Générateur de Mots de Passe
+
 
 **Fichier :** `scripts/generateur_mdp.py`
 
 **Utilisation de base :**
+
 
 ```bash
 python generateur_mdp.py
 ```
 
 **Options avancées :**
+
 
 ```bash
 # Générer un mot de passe de 16 caractères
@@ -148,7 +209,18 @@ python generateur_mdp.py --help
 
 ---
 
+| Option   | Description                       |
+| -------- | --------------------------------- |
+| `-l N`   | Longueur du mot de passe (8-64)   |
+| `-n N`   | Nombre de mots de passe à générer |
+| `-s`     | Exclure les symboles spéciaux     |
+| `-q`     | Mode silencieux                   |
+| `--help` | Afficher l’aide complète          |
+
+---
+
 ## 📁 Structure du projet
+
 
 ```
 novatech-website/
@@ -163,6 +235,7 @@ novatech-website/
 │   └── style.css
 ├── js/
 │   └── main.js
+│   └── main.js
 ├── images/
 │   └── logo.png
 ├── scripts/
@@ -173,7 +246,12 @@ novatech-website/
 
 ---
 
+---
+
 ## 🤝 Contributions
+
+Les contributions sont les bienvenues !
+
 
 Les contributions sont les bienvenues !
 
@@ -193,11 +271,30 @@ Les contributions sont les bienvenues !
    ```bash
    git push origin feature/AmazingFeature
    ```
+2. Créer une branche feature :
+
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. Committer les changements :
+
+   ```bash
+   git commit -m "Add AmazingFeature"
+   ```
+4. Pousser la branche :
+
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
 5. Ouvrir une Pull Request
 
 ---
 
+---
+
 ## 📜 Licence
+
+Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier et de le distribuer, sous réserve de mentionner l’auteur original.
 
 Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier et de le distribuer, sous réserve de mentionner l’auteur original.
 
