@@ -1,69 +1,83 @@
-# 🌐 NovaTech - Site Web Officiel
+Parfait 🚀 ! Je vais te préparer une version **“startup moderne”** de ton `README.md`, qui reprend ton contenu mais avec :
 
-Site web professionnel pour **NovaTech**, startup innovante spécialisée dans les solutions digitales, le développement web, les applications mobiles et les solutions cloud.
-
-## 📋 Table des matières
-
-* [Pages disponibles](#-pages-disponibles)
-* [Déploiement sur GitHub Pages](#-déploiement-sur-github-pages)
-* [Scripts Python](#-scripts-python)
-* [Structure du projet](#-structure-du-projet)
-* [Contributions](#-contributions)
-* [Licence](#-licence)
+* Des **badges GitHub** (stars, forks, licence, etc.)
+* Une **présentation plus visuelle** en haut (logo, tagline)
+* Des **sections attractives** avec icônes et emojis
+* Un style inspiré des dépôts de startups et SaaS
 
 ---
 
-## 📄 Pages disponibles
+Voici la version prête à coller 👇
 
-| Page                | Description                                             |
-| ------------------- | ------------------------------------------------------- |
-| **index.html**      | Page d’accueil avec présentation et services principaux |
-| **services.html**   | Détails des services avec grille tarifaire              |
-| **calculator.html** | Calculateur interactif de devis                         |
-| **blog.html**       | Articles et actualités avec système de filtrage         |
-| **about.html**      | À propos de l’entreprise et de l’équipe                 |
-| **contact.html**    | Formulaire de contact et coordonnées                    |
-| **legal.html**      | Mentions légales et politique de confidentialité        |
+````markdown
+<p align="center">
+  <img src="images/logo.png" alt="NovaTech Logo" width="120"/>
+</p>
+
+<h1 align="center">🌐 NovaTech</h1>
+<p align="center">
+  Startup innovante spécialisée dans les solutions digitales,<br>
+  le développement web, les applications mobiles et le cloud.
+</p>
+
+<p align="center">
+  <a href="https://github.com/votre-username/novatech-website/stargazers"><img src="https://img.shields.io/github/stars/votre-username/novatech-website?style=for-the-badge&logo=github" alt="GitHub stars"/></a>
+  <a href="https://github.com/votre-username/novatech-website/network/members"><img src="https://img.shields.io/github/forks/votre-username/novatech-website?style=for-the-badge&logo=github" alt="GitHub forks"/></a>
+  <a href="https://github.com/votre-username/novatech-website/blob/main/LICENSE"><img src="https://img.shields.io/github/license/votre-username/novatech-website?style=for-the-badge" alt="License"/></a>
+</p>
+
+---
+
+## 📋 Table des matières
+- [🌐 Pages disponibles](#-pages-disponibles)
+- [🚀 Déploiement sur GitHub Pages](#-déploiement-sur-github-pages)
+- [🐍 Scripts Python](#-scripts-python)
+- [📁 Structure du projet](#-structure-du-projet)
+- [🤝 Contributions](#-contributions)
+- [📜 Licence](#-licence)
+
+---
+
+## 🌐 Pages disponibles
+
+| Page              | Description |
+|-------------------|-------------|
+| **index.html**    | Page d’accueil avec présentation et services principaux |
+| **services.html** | Détails des services avec grille tarifaire |
+| **calculator.html** | Calculateur interactif de devis |
+| **blog.html**     | Articles et actualités avec système de filtrage |
+| **about.html**    | À propos de l’entreprise et de l’équipe |
+| **contact.html**  | Formulaire de contact et coordonnées |
+| **legal.html**    | Mentions légales et politique de confidentialité |
 
 ---
 
 ## 🚀 Déploiement sur GitHub Pages
 
 ### ✅ Prérequis
+- Compte GitHub
+- Git installé localement
+- Navigateur web moderne
 
-* Compte GitHub
-* Git installé localement
-* Navigateur web moderne
+### ⚙️ Étapes
+```bash
+# 1. Cloner le repository
+git clone https://github.com/votre-username/novatech-website.git
+cd novatech-website
 
-### ⚙️ Étapes de déploiement
+# 2. Ajouter les fichiers
+# Copier vos fichiers HTML, CSS, JS et assets dans ce dossier
 
-1. **Cloner le repository**
+# 3. Configurer GitHub Pages
+# - Aller dans Settings → Pages
+# - Sélectionner "Deploy from a branch"
+# - Choisir la branche main et le dossier /root
+# - Sauvegarder
+````
 
-   ```bash
-   git clone https://github.com/votre-username/novatech-website.git
-   cd novatech-website
-   ```
-
-2. **Ajouter les fichiers**
-
-   * Copier tous les fichiers HTML, CSS, JS et assets dans le dossier cloné.
-
-3. **Configurer GitHub Pages**
-
-   * Aller dans **Settings → Pages**
-   * Sélectionner **Deploy from a branch**
-   * Choisir la branche `main` et le dossier `/root`
-   * Sauvegarder
-
-4. **Accéder au site**
-
-   * Votre site sera disponible à l’adresse :
-
-   ```
-   https://votre-username.github.io/novatech-website/
-   ```
-
-   *(Le déploiement est généralement actif sous 1 à 2 minutes.)*
+🌍 Votre site sera disponible à l’adresse :
+👉 `https://votre-username.github.io/novatech-website/`
+*(Le déploiement est actif sous 1 à 2 minutes.)*
 
 ---
 
@@ -71,80 +85,29 @@ Site web professionnel pour **NovaTech**, startup innovante spécialisée dans l
 
 ### 📊 Calculateur de Devis
 
-**Fichier :** `scripts/calculateur_novatech.py`
-
-**Utilisation :**
-
 ```bash
 cd scripts
 python calculateur_novatech.py
 ```
 
-**Fonctionnalités :**
-
 * Calcul automatique des coûts de projet
-* Prise en compte de plusieurs paramètres :
-
-  * Type de projet
-  * Nombre de pages
-  * Niveau de design
-  * Fonctionnalités supplémentaires
-  * Options SEO
-* Application automatique de remises
-
-**Exemple de sortie :**
-
-```
-==================================================
-                DEVIS NOVATECH                
-==================================================
-Type de projet:        Site Web Vitrine
-Nombre de pages:       5
-Niveau de design:      Personnalisé
-Fonctionnalités:       2 option(s)
-Option SEO:            300€
---------------------------------------------------
-TOTAL:                 3100€
-==================================================
-```
+* Paramètres : type de projet, nombre de pages, design, fonctionnalités, SEO
+* Application de remises
 
 ---
 
 ### 🔐 Générateur de Mots de Passe
 
-**Fichier :** `scripts/generateur_mdp.py`
-
-**Utilisation de base :**
-
 ```bash
-python generateur_mdp.py
+python generateur_mdp.py -l 16 -n 3
 ```
 
-**Options avancées :**
+Options disponibles :
 
-```bash
-# Générer un mot de passe de 16 caractères
-python generateur_mdp.py -l 16
-
-# Générer 3 mots de passe sans symboles
-python generateur_mdp.py -n 3 -s
-
-# Mode silencieux (affichage minimal)
-python generateur_mdp.py -q
-
-# Aide complète
-python generateur_mdp.py --help
-```
-
-**Options disponibles :**
-
-| Option   | Description                       |
-| -------- | --------------------------------- |
-| `-l N`   | Longueur du mot de passe (8-64)   |
-| `-n N`   | Nombre de mots de passe à générer |
-| `-s`     | Exclure les symboles spéciaux     |
-| `-q`     | Mode silencieux                   |
-| `--help` | Afficher l’aide complète          |
+* `-l N` → Longueur (8-64)
+* `-n N` → Nombre de mots de passe
+* `-s` → Exclure les symboles
+* `-q` → Mode silencieux
 
 ---
 
@@ -175,7 +138,7 @@ novatech-website/
 
 ## 🤝 Contributions
 
-Les contributions sont les bienvenues !
+Les contributions sont **les bienvenues** !
 
 1. Forker le projet
 2. Créer une branche feature :
@@ -183,7 +146,7 @@ Les contributions sont les bienvenues !
    ```bash
    git checkout -b feature/AmazingFeature
    ```
-3. Committer les changements :
+3. Committer vos changements :
 
    ```bash
    git commit -m "Add AmazingFeature"
@@ -193,17 +156,28 @@ Les contributions sont les bienvenues !
    ```bash
    git push origin feature/AmazingFeature
    ```
-5. Ouvrir une Pull Request
+5. Ouvrir une **Pull Request**
 
 ---
 
 ## 📜 Licence
 
-Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier et de le distribuer, sous réserve de mentionner l’auteur original.
+Distribué sous la licence **MIT**.
+Vous êtes libre de l’utiliser, modifier et partager avec attribution.
 
 ---
 
-👉 **Note :** N’oubliez pas de remplacer `votre-username` par votre véritable nom d’utilisateur GitHub dans les liens.
+> ⚡ *NovaTech – Construisons l’avenir digital ensemble.*
+
+```
 
 ---
 
+👉 Ce `README.md` va donner un rendu **beaucoup plus professionnel et attractif**.  
+Tu n’as qu’à :  
+1. Copier-coller ce code dans ton fichier `README.md`.  
+2. Remplacer **`votre-username`** par ton vrai pseudo GitHub.  
+3. Vérifier que `images/logo.png` existe (ou change le chemin).  
+
+Veux-tu que je t’ajoute aussi un **lien de démo live** (style bouton “Voir le site”) en haut du README ?
+```
