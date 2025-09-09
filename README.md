@@ -1,8 +1,3 @@
-Parfait 👍 ton README est déjà bien détaillé, il y a juste quelques petits soucis de **redondance**, **hiérarchie de titres**, et **mise en forme** qui peuvent gêner l’affichage sur GitHub.
-Je vais te proposer une version **plus lisible**, **harmonisée**, avec des corrections pour améliorer le rendu final.
-
----
-
 # 🌐 NovaTech - Site Web Officiel
 
 Site web professionnel pour **NovaTech**, startup innovante spécialisée dans les solutions digitales, le développement web, les applications mobiles et les solutions cloud.
@@ -211,3 +206,4 @@ Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier
 👉 **Note :** N’oubliez pas de remplacer `votre-username` par votre véritable nom d’utilisateur GitHub dans les liens.
 
 ---
+
