@@ -304,5 +304,4 @@ Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier
 
 ---
 
-## Consulter le rendu par ici : 
-
+## Consulter le rendu par ici : [https://devby-kevin.github.io/SAYNA-STIMULE-NovaTech](https://devby-kevin.github.io/SAYNA-STIMULE-NovaTech)
