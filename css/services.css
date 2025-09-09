@@ -1,0 +1,401 @@
+/* HERO SERVICES */
+.services-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 100px;
+}
+
+.services-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
+        url('../images/service.jpg');
+    background-size: cover; /* Pour s'assurer que l'image couvre bien la zone */
+    background-position: center; /* Pour centrer l'image */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    z-index: -1;
+}
+
+.services-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.services-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--gray-light);
+}
+
+/* SERVICES CATEGORIES */
+.services-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.category-btn {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    color: var(--light);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.category-btn:hover, .category-btn.active {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+/* SERVICE DETAILS */
+.service-detail {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-right: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.service-title {
+    flex: 1;
+}
+
+.service-title h2 {
+    margin-bottom: 0.5rem;
+}
+
+.service-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.service-problem, .service-process, .service-features, .service-cta {
+    margin-bottom: 2rem;
+}
+
+.service-problem h3, .service-process h3, .service-features h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-problem h3 i, .service-process h3 i, .service-features h3 i {
+    margin-right: 0.5rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.process-step {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: 700;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
+    color: var(--secondary);
+    margin-right: 0.5rem;
+}
+
+.service-cta {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* SERVICE PACKS */
+.service-packs {
+    background: linear-gradient(135deg, rgba(10, 10, 24, 0.8) 0%, rgba(5, 5, 16, 0.8) 100%);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.service-packs::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.packs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.pack-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.pack-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pack-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.pack-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 2rem;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.pack-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.pack-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pack-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.pack-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.pack-features li {
+    margin-bottom: 0.8rem;
+    color: var(--gray-light);
+}
+
+.pack-features li i {
+    color: var(--secondary);
+    margin-right: 0.5rem;
+}
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+    url('../images/accord.png');
+    background-size: cover; /* Pour s'assurer que l'image couvre bien la zone */
+    background-position: center; /* Pour centrer l'image */
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--gray-light);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 992px) {
+    .service-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(10, 10, 24, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 2rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .services-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .service-price {
+        margin-top: 1rem;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.5rem;
+    }
+
+    .section {
+        padding: 3rem 0;
+    }
+
+    .service-detail {
+        padding: 2rem;
+    }
+}

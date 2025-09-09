@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container blog-hero-content">
+            <h1>Blog NovaTech</h1>
+            <p>Découvrez nos derniers articles, actualités et conseils pour rester à la pointe de la technologie et du développement digital.</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section">
+        <div class="container">
+            <!-- Filters Section -->
+            <div class="blog-filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Rechercher un article...">
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-tags"></i> Catégories</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="development">Développement</button>
+                        <button class="filter-btn" data-filter="cloud">Cloud</button>
+                        <button class="filter-btn" data-filter="seo">SEO</button>
+                        <button class="filter-btn" data-filter="security">Sécurité</button>
+                        <button class="filter-btn" data-filter="news">Actualités</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3><i class="fas fa-chart-line"></i> Trier par</h3>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-sort="newest">Plus récent</button>
+                        <button class="filter-btn" data-sort="popular">Plus populaire</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-container">
+                <!-- Articles Section -->
+                <div class="blog-articles" id="articles-container">
+                    <!-- Article 1 -->
+                    <article class="article-card animate-on-scroll" data-category="development" data-popularity="95" data-date="2023-06-12">
+                        <div class="article-image">
+                            <img src="./images/web1.avif" alt="L'avenir du développement web">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 12 Juin 2023</span>
+                                <span><i class="far fa-clock"></i> 5 min de lecture</span>
+                            </div>
+                            <h2>L'avenir du développement web en 2023</h2>
+                            <p>Découvrez les tendances émergentes et les technologies qui façonneront le développement web dans les prochaines années. React, Vue.js, et les frameworks fullstack prennent de l'ampleur.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/marc.avif" alt="Marc Dubois">
+                                    </div>
+                                    <div class="author-name">Marc Dubois</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 2 -->
+                    <article class="article-card animate-on-scroll" data-category="cloud" data-popularity="87" data-date="2023-05-28">
+                        <div class="article-image">
+                            <img src="./images/cloud1.avif" alt="Sécurité cloud">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 28 Mai 2023</span>
+                                <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                            </div>
+                            <h2>Best practices pour la sécurité cloud</h2>
+                            <p>Comment protéger vos données et applications dans le cloud avec les meilleures pratiques de sécurité actuelles. Découvrez nos recommandations pour AWS, Azure et Google Cloud.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="/images/sophie.avif" alt="Sophie Martin">
+                                    </div>
+                                    <div class="author-name">Sophie Martin</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="article-card animate-on-scroll" data-category="seo" data-popularity="92" data-date="2023-05-15">
+                        <div class="article-image">
+                            <img src="/images/ia1.avif" alt="IA et business">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 15 Mai 2023</span>
+                                <span><i class="far fa-clock"></i> 6 min de lecture</span>
+                            </div>
+                            <h2>Comment l'IA transforme votre stratégie SEO</h2>
+                            <p>Exploration des applications concrètes de l'intelligence artificielle pour optimiser le référencement naturel. Découvrez comment le machine learning révolutionne le SEO.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="/images/thomas.avif" alt="Thomas Leroy">
+                                    </div>
+                                    <div class="author-name">Thomas Leroy</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                    <article class="article-card animate-on-scroll" data-category="security" data-popularity="84" data-date="2023-04-22">
+                        <div class="article-image">
+                            <img src="/images/securite.avif" alt="Sécurité des applications">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 22 Avril 2023</span>
+                                <span><i class="far fa-clock"></i> 8 min de lecture</span>
+                            </div>
+                            <h2>Top 10 des vulnérabilités web en 2023</h2>
+                            <p>Notre analyse des principales vulnérabilités de sécurité affectant les applications web modernes et comment les prévenir. Basé sur le dernier rapport OWASP.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile4.avif" alt="Pierre Moreau">
+                                    </div>
+                                    <div class="author-name">Pierre Moreau</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 5 -->
+                    <article class="article-card animate-on-scroll" data-category="news" data-popularity="78" data-date="2023-04-10">
+                        <div class="article-image">
+                            <img src="./images/react.avif" alt="Nouveautés React">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 10 Avril 2023</span>
+                                <span><i class="far fa-clock"></i> 4 min de lecture</span>
+                            </div>
+                            <h2>React 18 : Les nouvelles fonctionnalités expliquées</h2>
+                            <p>Découvrez les dernières avancées de React 18, y compris le concurrent rendering, les automatic batching, et les nouvelles APIs comme useId et useSyncExternalStore.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile5.avif" alt="Laura Dupont">
+                                    </div>
+                                    <div class="author-name">Laura Dupont</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="article-card animate-on-scroll" data-category="cloud" data-popularity="70" data-date="2023-03-28">
+                        <div class="article-image">
+                            <img src="./images/web2.avif" alt="Cloud hybride">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 28 Mars 2023</span>
+                                <span><i class="far fa-clock"></i> 6 min de lecture</span>
+                            </div>
+                            <h2>Cloud hybride : avantages et défis pour les entreprises</h2>
+                            <p>Le cloud hybride s'impose comme la solution idéale pour de nombreuses entreprises. Découvrez ses principaux avantages, mais aussi les défis à relever pour une adoption réussie.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile6.avif" alt="Sophie Martin">
+                                    </div>
+                                    <div class="author-name">Sophie Martin</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 7 -->
+                    <article class="article-card animate-on-scroll" data-category="seo" data-popularity="65" data-date="2023-03-15">
+                        <div class="article-image">
+                            <img src="./images/seo.avif" alt="SEO mobile">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 15 Mars 2023</span>
+                                <span><i class="far fa-clock"></i> 5 min de lecture</span>
+                            </div>
+                            <h2>SEO mobile : les bonnes pratiques en 2023</h2>
+                            <p>Le référencement mobile est plus important que jamais. Voici les meilleures pratiques à adopter pour optimiser la visibilité de votre site sur smartphones et tablettes.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile0.avif" alt="Nicolas Bernard">
+                                    </div>
+                                    <div class="author-name">Nicolas Bernard</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 8 -->
+                    <article class="article-card animate-on-scroll" data-category="security" data-popularity="80" data-date="2023-02-28">
+                        <div class="article-image">
+                            <img src="./images/securite2.avif" alt="Sécurité des données">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 28 Février 2023</span>
+                                <span><i class="far fa-clock"></i> 7 min de lecture</span>
+                            </div>
+                            <h2>Protéger ses données : les bonnes pratiques en entreprise</h2>
+                            <p>La sécurité des données est un enjeu majeur pour toutes les entreprises. Découvrez les meilleures pratiques pour protéger vos informations sensibles contre les cybermenaces.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile7.avif" alt="Claire Dubois">
+                                    </div>
+                                    <div class="author-name">Claire Dubois</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 9 -->
+                    <article class="article-card animate-on-scroll" data-category="news" data-popularity="60" data-date="2023-02-10">
+                        <div class="article-image">
+                            <img src="./images/tech.avif" alt="Actualités tech">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 10 Février 2023</span>
+                                <span><i class="far fa-clock"></i> 4 min de lecture</span>
+                            </div>
+                            <h2>Les tendances tech à suivre en 2023</h2>
+                            <p>Quelles sont les grandes tendances technologiques de l'année ? Intelligence artificielle, cloud, cybersécurité... Tour d'horizon des innovations à surveiller.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile8.avif" alt="Julien Lefèvre">
+                                    </div>
+                                    <div class="author-name">Julien Lefèvre</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 10 -->
+                    <article class="article-card animate-on-scroll" data-category="development" data-popularity="55" data-date="2023-01-25">
+                        <div class="article-image">
+                            <img src="./images/react.avif" alt="Frameworks JavaScript">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 25 Janvier 2023</span>
+                                <span><i class="far fa-clock"></i> 8 min de lecture</span>
+                            </div>
+                            <h2>Les frameworks JavaScript incontournables en 2023</h2>
+                            <p>React, Vue, Angular... Quels frameworks JavaScript domineront le développement web cette année ? Analyse des forces et faiblesses de chaque solution.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile4.avif" alt="Sophie Martin">
+                                    </div>
+                                    <div class="author-name">Sophie Martin</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 11 -->
+                    <article class="article-card animate-on-scroll" data-category="cloud" data-popularity="50" data-date="2023-01-10">
+                        <div class="article-image">
+                            <img src="./images/cloud1.avif" alt="Cloud computing">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 10 Janvier 2023</span>
+                                <span><i class="far fa-clock"></i> 6 min de lecture</span>
+                            </div>
+                            <h2>Cloud computing : comment choisir la bonne solution ?</h2>
+                            <p>Public, privé ou hybride ? Découvrez les critères essentiels pour choisir la solution cloud la plus adaptée à votre entreprise.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/profile2.avif" alt="Nicolas Bernard">
+                                    </div>
+                                    <div class="author-name">Nicolas Bernard</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 12 -->
+                    <article class="article-card animate-on-scroll" data-category="seo" data-popularity="45" data-date="2022-12-20">
+                        <div class="article-image">
+                            <img src="./images/web2.avif" alt="SEO local">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span><i class="far fa-calendar"></i> 20 Décembre 2022</span>
+                                <span><i class="far fa-clock"></i> 5 min de lecture</span>
+                            </div>
+                            <h2>SEO local : booster la visibilité de votre entreprise</h2>
+                            <p>Le référencement local est un levier puissant pour attirer de nouveaux clients. Découvrez comment optimiser votre présence sur Google et les annuaires locaux.</p>
+                            <div class="article-footer">
+                                <div class="article-author">
+                                    <div class="author-avatar">
+                                        <img src="./images/laura.avif" alt="Claire Dubois">
+                                    </div>
+                                    <div class="author-name">Claire Dubois</div>
+                                </div>
+                                <a href="article.html" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Popular Articles -->
+                    <div class="sidebar-widget">
+                        <h3><i class="fas fa-fire"></i> Articles populaires</h3>
+                        <ul class="popular-articles">
+                            <li class="popular-article">
+                                <img src="./images/web1.avif" alt="L'avenir du développement web">
+                                <div class="popular-article-content">
+                                    <h4>L'avenir du développement web en 2023</h4>
+                                    <span class="article-date">12 Juin 2023</span>
+                                </div>
+                            </li>
+                            <li class="popular-article">
+                                <img src="./images/ia1.avif" alt="IA et business">
+                                <div class="popular-article-content">
+                                    <h4>Comment l'IA transforme votre stratégie SEO</h4>
+                                    <span class="article-date">15 Mai 2023</span>
+                                </div>
+                            </li>
+                            <li class="popular-article">
+                                <img src="./images/securite.avif" alt="Sécurité des applications">
+                                <div class="popular-article-content">
+                                    <h4>Top 10 des vulnérabilités web en 2023</h4>
+                                    <span class="article-date">22 Avril 2023</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3><i class="fas fa-folder"></i> Catégories</h3>
+                        <ul class="categories-list">
+                            <li class="category-item">
+                                <span>Développement</span>
+                                <span class="category-count">12</span>
+                            </li>
+                            <li class="category-item">
+                                <span>Cloud</span>
+                                <span class="category-count">8</span>
+                            </li>
+                            <li class="category-item">
+                                <span>SEO</span>
+                                <span class="category-count">6</span>
+                            </li>
+                            <li class="category-item">
+                                <span>Sécurité</span>
+                                <span class="category-count">9</span>
+                            </li>
+                            <li class="category-item">
+                                <span>Actualités</span>
+                                <span class="category-count">7</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3><i class="fas fa-envelope"></i> Newsletter</h3>
+                        <p>Abonnez-vous pour recevoir nos derniers articles et actualités.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre adresse email" required>
+                            <button type="submit" class="btn btn-secondary">S'abonner</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="pagination-btn"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" class="pagination-btn active">1</a>
+                <a href="#" class="pagination-btn">2</a>
+                <a href="#" class="pagination-btn">3</a>
+                <a href="#" class="pagination-btn"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">NovaTech</span>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Calculateur</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Développement Web</a></li>
+                        <li><a href="services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="services.html#seo">Référencement SEO</a></li>
+                        <li><a href="services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filtrage des articles
+        const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+        const sortButtons = document.querySelectorAll('.filter-btn[data-sort]');
+        const searchInput = document.getElementById('search-input');
+        const articlesContainer = document.getElementById('articles-container');
+        const articles = Array.from(articlesContainer.querySelectorAll('.article-card'));
+        
+        let currentFilter = 'all';
+        let currentSort = 'newest';
+        let currentSearch = '';
+        
+        // Fonction de filtrage
+        function filterArticles() {
+            articles.forEach(article => {
+                const category = article.getAttribute('data-category');
+                const title = article.querySelector('h2').textContent.toLowerCase();
+                const content = article.querySelector('p').textContent.toLowerCase();
+                
+                // Filtre par catégorie
+                const categoryMatch = currentFilter === 'all' || category === currentFilter;
+                
+                // Filtre par recherche
+                const searchMatch = currentSearch === '' || 
+                                  title.includes(currentSearch) || 
+                                  content.includes(currentSearch);
+                
+                // Afficher ou masquer l'article
+                if (categoryMatch && searchMatch) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Trier les articles
+            sortArticles();
+        }
+        
+        // Fonction de tri
+        function sortArticles() {
+            const visibleArticles = articles.filter(article => article.style.display !== 'none');
+            
+            visibleArticles.sort((a, b) => {
+                if (currentSort === 'newest') {
+                    return new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date'));
+                } else if (currentSort === 'popular') {
+                    return parseInt(b.getAttribute('data-popularity')) - parseInt(a.getAttribute('data-popularity'));
+                }
+                return 0;
+            });
+            
+            // Réorganiser les articles dans le conteneur
+            visibleArticles.forEach(article => {
+                articlesContainer.appendChild(article);
+            });
+        }
+        
+        // Événements pour les boutons de filtre
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentFilter = button.getAttribute('data-filter');
+                filterArticles();
+            });
+        });
+        
+        // Événements pour les boutons de tri
+        sortButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                sortButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentSort = button.getAttribute('data-sort');
+                sortArticles();
+            });
+        });
+        
+        // Événement pour la recherche
+        searchInput.addEventListener('input', () => {
+            currentSearch = searchInput.value.toLowerCase();
+            filterArticles();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Devis - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/calculator.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- Hero Calculator -->
+    <section class="calculator-hero">
+        <div class="container calculator-hero-content">
+            <h1>Calculateur de Devis</h1>
+            <p>Obtenez une estimation instantanée du coût de votre projet digital. Sélectionnez les options souhaitées et visualisez le prix en temps réel.</p>
+        </div>
+    </section>
+
+    <!-- Calculator Tabs -->
+    <section class="section">
+        <div class="container">
+            <div class="calculator-tabs">
+                <button class="tab-btn active" data-tab="calculator">Calculateur Interactif</button>
+                <button class="tab-btn" data-tab="python">Exécution Python</button>
+                <a href="./scripte.html"><button class="tab-btn">Tester nos scripts</button></a>
+                <button class="tab-btn" data-tab="download">Téléchargement & Guide</button>
+            </div>
+
+            <!-- Calculator Interactive -->
+            <div class="calculator-content active" id="calculator-content">
+                <div class="calculator-container">
+                    <div class="calculator-form">
+                        <div class="form-section">
+                            <h3><i class="fas fa-laptop-code"></i> Type de Projet</h3>
+                            <div class="form-group">
+                                <label>Sélectionnez le type de projet</label>
+                                <select id="project-type">
+                                    <option value="">-- Choisissez une option --</option>
+                                    <option value="website">Site Web Vitrine</option>
+                                    <option value="ecommerce">Site E-commerce</option>
+                                    <option value="webapp">Application Web</option>
+                                    <option value="mobile">Application Mobile</option>
+                                    <option value="desktop">Application Desktop</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-paint-brush"></i> Design & UX</h3>
+                            <div class="form-group">
+                                <label>Nombre de pages</label>
+                                <select id="page-count">
+                                    <option value="1">1-5 pages</option>
+                                    <option value="1.5">6-10 pages</option>
+                                    <option value="2">11-15 pages</option>
+                                    <option value="2.5">16-20 pages</option>
+                                    <option value="3">21+ pages</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Style de design</label>
+                                <div class="options-grid">
+                                    <div class="option-card" data-value="1">
+                                        <h4>Basique</h4>
+                                        <p>Design simple et fonctionnel</p>
+                                        <div class="option-price">+ 0€</div>
+                                    </div>
+                                    <div class="option-card" data-value="1.5">
+                                        <h4>Personnalisé</h4>
+                                        <p>Design sur mesure</p>
+                                        <div class="option-price">+ 500€</div>
+                                    </div>
+                                    <div class="option-card" data-value="2">
+                                        <h4>Premium</h4>
+                                        <p>Design haut de gamme</p>
+                                        <div class="option-price">+ 1000€</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-cogs"></i> Fonctionnalités</h3>
+                            <div class="options-grid">
+                                <div class="option-card" data-value="500">
+                                    <h4>Formulaire de contact</h4>
+                                    <p>Formulaire avec gestion des messages</p>
+                                    <div class="option-price">+ 500€</div>
+                                </div>
+                                <div class="option-card" data-value="800">
+                                    <h4>Espace membre</h4>
+                                    <p>Inscription, connexion, profil</p>
+                                    <div class="option-price">+ 800€</div>
+                                </div>
+                                <div class="option-card" data-value="1200">
+                                    <h4>Paiement en ligne</h4>
+                                    <p>Intégration de solution de paiement</p>
+                                    <div class="option-price">+ 1200€</div>
+                                </div>
+                                <div class="option-card" data-value="700">
+                                    <h4>Blog/Actualités</h4>
+                                    <p>Système de gestion de contenu</p>
+                                    <div class="option-price">+ 700€</div>
+                                </div>
+                                <div class="option-card" data-value="1000">
+                                    <h4>Multilingue</h4>
+                                    <p>Site disponible en plusieurs langues</p>
+                                    <div class="option-price">+ 1000€</div>
+                                </div>
+                                <div class="option-card" data-value="600">
+                                    <h4>Réseaux sociaux</h4>
+                                    <p>Intégration et partage social</p>
+                                    <div class="option-price">+ 600€</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3><i class="fas fa-search"></i> Référencement (SEO)</h3>
+                            <div class="options-grid">
+                                <div class="option-card" data-value="300">
+                                    <h4>SEO Basique</h4>
+                                    <p>Optimisation élémentaire</p>
+                                    <div class="option-price">+ 300€</div>
+                                </div>
+                                <div class="option-card" data-value="800">
+                                    <h4>SEO Avancé</h4>
+                                    <p>Stratégie complète</p>
+                                    <div class="option-price">+ 800€</div>
+                                </div>
+                                <div class="option-card" data-value="1500">
+                                    <h4>SEO Premium</h4>
+                                    <p>Stratégie complète + suivi</p>
+                                    <div class="option-price">+ 1500€</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-summary">
+                        <h3>Votre Devis</h3>
+                        <div class="summary-item">
+                            <span>Type de projet</span>
+                            <span id="project-type-cost">0€</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Design & UX</span>
+                            <span id="design-cost">0€</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Fonctionnalités</span>
+                            <span id="features-cost">0€</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Référencement</span>
+                            <span id="seo-cost">0€</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span id="total-cost">0€</span>
+                        </div>
+                        <div class="summary-actions">
+                            <button class="btn btn-primary" id="export-pdf">Exporter le devis (PDF)</button>
+                            <button class="btn btn-secondary" id="reset-calculator">Réinitialiser</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Python Execution -->
+            <div class="calculator-content" id="python-content">
+                <div class="python-execution">
+                    <h2>Exécution du Script Python</h2>
+                    <p>Notre calculateur de devis utilise un script Python en backend pour effectuer les calculs. Vous pouvez tester le script directement ci-dessous.</p>
+                    
+                    <div class="code-container">
+                        <pre><code>
+<span class="code-comment"># calculateur_novatech.py</span>
+<span class="code-comment"># Script de calcul de devis pour NovaTech</span>
+
+<span class="code-keyword">def</span> <span class="code-function">calculer_prix_projet</span>(type_projet, nb_pages, design, fonctionnalites, seo):
+    <span class="code-comment"># Prix de base selon le type de projet</span>
+    prix_base = {
+        <span class="code-string">'website'</span>: <span class="code-number">1500</span>,
+        <span class="code-string">'ecommerce'</span>: <span class="code-number">3500</span>,
+        <span class="code-string">'webapp'</span>: <span class="code-number">5000</span>,
+        <span class="code-string">'mobile'</span>: <span class="code-number">8500</span>,
+        <span class="code-string">'desktop'</span>: <span class="code-number">7000</span>
+    }
+    
+    <span class="code-comment"># Calcul du prix total</span>
+    total = prix_base.get(type_projet, <span class="code-number">0</span>)
+    total += nb_pages * <span class="code-number">100</span>  <span class="code-comment"># 100€ par page</span>
+    total += (design - <span class="code-number">1</span>) * <span class="code-number">500</span>  <span class="code-comment"># Supplément design</span>
+    total += sum(fonctionnalites)  <span class="code-comment"># Fonctionnalités supplémentaires</span>
+    total += seo  <span class="code-comment"># Option SEO</span>
+    
+    <span class="code-keyword">return</span> total
+
+<span class="code-comment"># Exemple d'utilisation</span>
+<span class="code-keyword">if</span> __name__ == <span class="code-string">'__main__'</span>:
+    <span class="code-comment"># Configuration d'un projet exemple</span>
+    type_projet = <span class="code-string">'website'</span>
+    nb_pages = <span class="code-number">5</span>
+    design = <span class="code-number">1.5</span>  <span class="code-comment"># Design personnalisé</span>
+    fonctionnalites = [<span class="code-number">500</span>, <span class="code-number">800</span>]  <span class="code-comment"># Formulaire + Espace membre</span>
+    seo = <span class="code-number">300</span>  <span class="code-comment"># SEO Basique</span>
+    
+    total = calculer_prix_projet(type_projet, nb_pages, design, fonctionnalites, seo)
+    print(<span class="code-string">f"Le prix total estimé est de {total}€"</span>)
+                        </code></pre>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Testez le script avec vos valeurs</label>
+                        <select id="python-project-type">
+                            <option value="website">Site Web Vitrine</option>
+                            <option value="ecommerce">Site E-commerce</option>
+                            <option value="webapp">Application Web</option>
+                            <option value="mobile">Application Mobile</option>
+                            <option value="desktop">Application Desktop</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary" id="run-python">Exécuter le script</button>
+
+                    <div class="code-container" id="python-output">
+                        <p>Le résultat s'affichera ici après exécution...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download Section -->
+            <div class="calculator-content" id="download-content">
+                <div class="download-section">
+                    <h2>Téléchargement & Guide</h2>
+                    <p>Téléchargez nos scripts Python et guides pour utiliser nos outils de calcul en local.</p>
+                    
+                    <div class="download-grid">
+                        <div class="download-card">
+                            <i class="fas fa-calculator"></i>
+                            <h3>Calculateur NovaTech</h3>
+                            <p>Script Python complet pour calculer des devis de projets digitaux.</p>
+                            <a href="./scripts/calculateur_novatech.py"><button class="btn btn-primary">Télécharger</button></a>
+                        </div>
+                        
+                        <div class="download-card">
+                            <i class="fas fa-key"></i>
+                            <h3>Générateur de Mots de Passe</h3>
+                            <p>Outil pour créer des mots de passe sécurisés pour vos projets.</p>
+                            <a href="./scripts/generateur_mdp.py"><button class="btn btn-primary">Télécharger</button></a>
+                        </div>
+                        
+                        <div class="download-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Analyseur de Sentiments</h3>
+                            <p>Script d'analyse de sentiments pour les témoignages clients.</p>
+                            <a href="./scripts/analyseur_sentiments.py"><button class="btn btn-primary">Télécharger</button></a>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section" style="margin-top: 3rem;">
+                        <h3><i class="fas fa-book"></i> Guide d'installation et d'utilisation</h3>
+                        <p>Pour utiliser nos scripts Python, suivez ces étapes :</p>
+                        <ol>
+                            <li>Téléchargez et installez Python 3.8 ou supérieur depuis <a href="https://python.org" style="color: var(--primary);">python.org</a></li>
+                            <li>Téléchargez le script souhaité ci-dessus</li>
+                            <li>Ouvrez un terminal dans le dossier contenant le script</li>
+                            <li>Exécutez la commande : <code>python nom_du_script.py</code></li>
+                            <li>Suivez les instructions à l'écran</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">NovaTech</span>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Calculateur</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Développement Web</a></li>
+                        <li><a href="services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="services.html#seo">Référencement SEO</a></li>
+                        <li><a href="services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion des onglets
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.calculator-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Désactiver tous les onglets
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Activer l'onglet cliqué
+                button.classList.add('active');
+                document.getElementById(`${tabId}-content`).classList.add('active');
+            });
+        });
+        
+        // Calculateur interactif
+        const projectTypeSelect = document.getElementById('project-type');
+        const pageCountSelect = document.getElementById('page-count');
+        const designOptions = document.querySelectorAll('.form-section:nth-child(2) .option-card');
+        const featureOptions = document.querySelectorAll('.form-section:nth-child(3) .option-card');
+        const seoOptions = document.querySelectorAll('.form-section:nth-child(4) .option-card');
+        
+        const projectTypeCost = document.getElementById('project-type-cost');
+        const designCost = document.getElementById('design-cost');
+        const featuresCost = document.getElementById('features-cost');
+        const seoCost = document.getElementById('seo-cost');
+        const totalCost = document.getElementById('total-cost');
+        
+        const resetButton = document.getElementById('reset-calculator');
+        const exportButton = document.getElementById('export-pdf');
+        
+        // Prix de base par type de projet
+        const basePrices = {
+            'website': 1500,
+            'ecommerce': 3500,
+            'webapp': 5000,
+            'mobile': 8500,
+            'desktop': 7000
+        };
+        
+        // Variables pour stocker les sélections
+        let currentProjectType = '';
+        let currentPageCount = 1;
+        let currentDesign = 0;
+        let currentFeatures = [];
+        let currentSeo = 0;
+        
+        // Fonction de mise à jour du total
+        function updateTotal() {
+            let total = 0;
+            
+            // Prix de base du projet
+            const basePrice = basePrices[currentProjectType] || 0;
+            total += basePrice;
+            projectTypeCost.textContent = `${basePrice}€`;
+            
+            // Coût des pages
+            const pageCost = currentPageCount * 100;
+            total += pageCost;
+            
+            // Coût du design
+            const designPrice = (currentDesign - 1) * 500;
+            total += designPrice;
+            designCost.textContent = `${designPrice}€`;
+            
+            // Coût des fonctionnalités
+            const featuresPrice = currentFeatures.reduce((acc, val) => acc + val, 0);
+            total += featuresPrice;
+            featuresCost.textContent = `${featuresPrice}€`;
+            
+            // Coût SEO
+            total += currentSeo;
+            seoCost.textContent = `${currentSeo}€`;
+            
+            // Mise à jour du total
+            totalCost.textContent = `${total}€`;
+        }
+        
+        // Écouteurs d'événements pour les sélections
+        projectTypeSelect.addEventListener('change', (e) => {
+            currentProjectType = e.target.value;
+            updateTotal();
+        });
+        
+        pageCountSelect.addEventListener('change', (e) => {
+            currentPageCount = parseFloat(e.target.value);
+            updateTotal();
+        });
+        
+        // Gestion des options de design
+        designOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                designOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                currentDesign = parseFloat(option.getAttribute('data-value'));
+                updateTotal();
+            });
+        });
+        
+        // Gestion des fonctionnalités
+        featureOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                option.classList.toggle('selected');
+                const value = parseFloat(option.getAttribute('data-value'));
+                
+                if (option.classList.contains('selected')) {
+                    currentFeatures.push(value);
+                } else {
+                    currentFeatures = currentFeatures.filter(v => v !== value);
+                }
+                
+                updateTotal();
+            });
+        });
+        
+        // Gestion des options SEO
+        seoOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                seoOptions.forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+                currentSeo = parseFloat(option.getAttribute('data-value'));
+                updateTotal();
+            });
+        });
+        
+        // Réinitialisation du calculateur
+        resetButton.addEventListener('click', () => {
+            currentProjectType = '';
+            currentPageCount = 1;
+            currentDesign = 0;
+            currentFeatures = [];
+            currentSeo = 0;
+            
+            projectTypeSelect.value = '';
+            pageCountSelect.value = '1';
+            
+            designOptions.forEach(opt => opt.classList.remove('selected'));
+            featureOptions.forEach(opt => opt.classList.remove('selected'));
+            seoOptions.forEach(opt => opt.classList.remove('selected'));
+            
+            updateTotal();
+        });
+        
+        // Export PDF (simulation)
+        exportButton.addEventListener('click', () => {
+            alert('Fonctionnalité d\'export PDF bientôt disponible!');
+        });
+        
+        // Exécution du script Python (simulée)
+        const runPythonButton = document.getElementById('run-python');
+        const pythonOutput = document.getElementById('python-output');
+        const pythonProjectType = document.getElementById('python-project-type');
+        
+        runPythonButton.addEventListener('click', () => {
+            // Simulation de l'exécution du script Python
+            const type = pythonProjectType.value;
+            const basePrice = basePrices[type];
+            
+            pythonOutput.innerHTML = `
+                <p><span style="color: #6a9955;"># Exécution du script calculateur_novatech.py</span></p>
+                <p>Le prix total estimé est de <strong>${basePrice}€</strong> (projet ${type})</p>
+                <p><span style="color: #6a9955;"># Exécution terminée</span></p>
+            `;
+        });
+    </script>
+</body>
+</html>

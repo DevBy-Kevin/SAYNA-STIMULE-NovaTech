@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/services.css">
+    <script type="module" src="./js/main.js" defer></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- HERO SERVICES -->
+    <section class="services-hero">
+        <div class="container services-hero-content">
+            <h1>Nos Services</h1>
+            <p>Des solutions sur-mesure pour votre transformation digitale. Découvrez comment NovaTech peut propulser votre entreprise vers l'avenir.</p>
+            <a href="#services" class="btn btn-primary">Découvrir nos solutions</a>
+        </div>
+    </section>
+
+    <!-- SERVICES CATEGORIES -->
+    <section class="section">
+        <div class="container">
+            <div class="services-categories">
+                <button class="category-btn active" data-category="all">Tous les services</button>
+                <button class="category-btn" data-category="web">Développement Web</button>
+                <button class="category-btn" data-category="mobile">Applications Mobile</button>
+                <button class="category-btn" data-category="cloud">Solutions Cloud</button>
+                <button class="category-btn" data-category="marketing">Marketing Digital</button>
+                <button class="category-btn" data-category="security">Sécurité</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES DETAILS -->
+    <section id="services" class="section">
+        <div class="container">
+            <!-- Service 1: Développement Web -->
+            <div class="service-detail animate-on-scroll" data-category="web" id="web">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="service-title">
+                        <h2>Site Vitrine (5 pages)</h2>
+                        <p>Présence en ligne professionnelle et responsive</p>
+                    </div>
+                    <div class="service-price">À partir de 1500€</div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-problem">
+                        <h3><i class="fas fa-exclamation-circle"></i> Problème client</h3>
+                        <p>Dans un environnement numérique en constante évolution, disposer d’un site vitrine professionnel est devenu indispensable pour toute entreprise souhaitant se démarquer et inspirer confiance. Un site vitrine bien conçu vous permet de présenter votre activité, vos valeurs et vos réalisations de manière claire et attractive, tout en offrant à vos visiteurs une expérience de navigation fluide et agréable sur tous les appareils.</p>
+                        <p>Ce service s’adresse à toutes les structures qui souhaitent renforcer leur crédibilité, attirer de nouveaux clients et faciliter la prise de contact. Grâce à une interface moderne, un design responsive et une optimisation pour le référencement naturel (SEO), votre site devient un véritable levier de croissance. Il met en avant vos atouts, vos offres et vos actualités, tout en intégrant des fonctionnalités essentielles comme un formulaire de contact sécurisé, des liens vers vos réseaux sociaux et une interface d’administration intuitive pour gérer facilement vos contenus.</p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3><i class="fas fa-cogs"></i> Processus NovaTech</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Audit</h4>
+                                <p>Analyse de vos besoins et objectifs</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Design</h4>
+                                <p>Création d'une interface moderne et intuitive</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Développement</h4>
+                                <p>Intégration responsive et optimisation</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Formation</h4>
+                                <p>Prise en main de votre outil de gestion</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-star"></i> Avantages</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Design responsive et moderne</li>
+                            <li><i class="fas fa-check"></i> Référencement optimisé (SEO)</li>
+                            <li><i class="fas fa-check"></i> Interface d'administration intuitive</li>
+                            <li><i class="fas fa-check"></i> Intégration des réseaux sociaux</li>
+                            <li><i class="fas fa-check"></i> Formulaire de contact sécurisé</li>
+                            <li><i class="fas fa-check"></i> Support technique 6 mois inclus</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <a href="calculator.html" class="btn btn-primary">Demander un devis spécifique</a>
+                </div>
+            </div>
+            
+            <!-- Service 2: Application Mobile -->
+            <div class="service-detail animate-on-scroll" data-category="mobile" id="mobile">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="service-title">
+                        <h2>Application Mobile</h2>
+                        <p>Solution cross-platform iOS et Android</p>
+                    </div>
+                    <div class="service-price">À partir de 8500€</div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-problem">
+                        <h3><i class="fas fa-exclamation-circle"></i> Problème client</h3>
+                        <p>Vous souhaitez développer une application mobile pour renforcer la fidélité de vos clients, automatiser vos processus internes, ou explorer de nouveaux marchés et canaux de croissance. Que ce soit pour proposer un service innovant, améliorer l’expérience utilisateur ou digitaliser une partie de votre activité, une application mobile sur-mesure peut devenir un véritable levier de performance et de différenciation.</p>
+                        <p>Chez NovaTech, nous commençons par une analyse approfondie de vos besoins, de votre cible et de vos objectifs stratégiques. Nous vous conseillons sur les fonctionnalités clés, l’ergonomie et les technologies les plus adaptées à votre projet. Notre équipe vous accompagne à chaque étape : de la conception des wireframes et du design UX/UI, au développement cross-platform (iOS et Android), jusqu’à la publication sur les stores et la maintenance évolutive. Nous assurons un suivi technique rigoureux, des tests approfondis et restons à vos côtés pour faire évoluer votre application selon vos ambitions et les retours de vos utilisateurs.</p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3><i class="fas fa-cogs"></i> Processus NovaTech</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Conception</h4>
+                                <p>Wireframes et UX design</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Prototypage</h4>
+                                <p>Validation des fonctionnalités</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Développement</h4>
+                                <p>Code cross-platform React Native</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Publication</h4>
+                                <p>Mise en ligne sur les stores</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-star"></i> Avantages</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Compatible iOS et Android</li>
+                            <li><i class="fas fa-check"></i> Interface utilisateur intuitive</li>
+                            <li><i class="fas fa-check"></i> Performance optimisée</li>
+                            <li><i class="fas fa-check"></i> Maintenance incluse 1 an</li>
+                            <li><i class="fas fa-check"></i> Analytics intégrés</li>
+                            <li><i class="fas fa-check"></i> Mises à jour régulières</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <a href="calculator.html" class="btn btn-primary">Demander un devis spécifique</a>
+                </div>
+            </div>
+            
+            <!-- Service 3: Hébergement VPS -->
+            <div class="service-detail animate-on-scroll" data-category="cloud" id="cloud">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <div class="service-title">
+                        <h2>Hébergement VPS</h2>
+                        <p>Solution cloud haute performance</p>
+                    </div>
+                    <div class="service-price">À partir de 49€/mois</div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-problem">
+                        <h3><i class="fas fa-exclamation-circle"></i> Problème client</h3>
+                        <p>Vous souhaitez garantir la performance, la sécurité et la scalabilité de vos applications et sites web grâce à une infrastructure cloud fiable. Les solutions d’hébergement classiques ne répondent plus à vos exigences de flexibilité et de disponibilité, surtout lorsque votre activité se développe ou que le trafic augmente soudainement.</p>
+                        <p>Vous faites face à des problématiques de gestion de ressources, de sauvegardes régulières, de protection contre les cybermenaces et de continuité de service. Il est essentiel pour vous de pouvoir adapter rapidement votre infrastructure à vos besoins, tout en bénéficiant d’un accompagnement technique réactif et d’une surveillance constante.</p>
+                        <p>Vous recherchez donc une solution qui vous permette de vous concentrer sur votre cœur de métier, tout en ayant l’assurance que vos données et vos services sont hébergés dans un environnement sécurisé, évolutif et optimisé pour la performance.</p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3><i class="fas fa-cogs"></i> Processus NovaTech</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Configuration</h4>
+                                <p>Choix des ressources nécessaires</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Déploiement</h4>
+                                <p>Installation et optimisation serveur</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Sécurisation</h4>
+                                <p>Protection avancée contre les menaces</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Monitoring</h4>
+                                <p>Surveillance 24/7 et sauvegardes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-star"></i> Avantages</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Resources dédiées garanties</li>
+                            <li><i class="fas fa-check"></i> SSD haute performance</li>
+                            <li><i class="fas fa-check"></i> Sauvegardes automatiques quotidiennes</li>
+                            <li><i class="fas fa-check"></i> Support technique 24/7</li>
+                            <li><i class="fas fa-check"></i> Évolutivité à la demande</li>
+                            <li><i class="fas fa-check"></i> Certificat SSL inclus</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <a href="calculator.html" class="btn btn-primary">Demander un devis spécifique</a>
+                </div>
+            </div>
+            
+            <!-- Service 4: Audit SEO -->
+            <div class="service-detail animate-on-scroll" data-category="marketing" id="seo">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-title">
+                        <h2>Audit SEO</h2>
+                        <p>Optimisation pour les moteurs de recherche</p>
+                    </div>
+                    <div class="service-price">À partir de 1200€</div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-problem">
+                        <h3><i class="fas fa-exclamation-circle"></i> Problème client</h3>
+                        <p>Votre site web peine à se positionner dans les premiers résultats des moteurs de recherche, ce qui réduit considérablement sa visibilité auprès de vos clients potentiels. Cette faible présence en ligne entraîne une diminution du trafic qualifié et limite la notoriété de votre marque.</p>
+                        <p>En conséquence, votre entreprise passe à côté d’opportunités commerciales importantes, tandis que vos concurrents, mieux référencés, captent l’attention de votre audience cible. Sans une optimisation adaptée, il devient difficile d’atteindre vos objectifs de croissance et de rentabilité sur le web.</p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3><i class="fas fa-cogs"></i> Processus NovaTech</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Analyse technique</h4>
+                                <p>Audit complet des performances</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Recherche de mots-clés</h4>
+                                <p>Identification des opportunités</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Optimisation</h4>
+                                <p>Corrections et recommandations</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Suivi</h4>
+                                <p>Reporting mensuel des progrès</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-star"></i> Avantages</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Audit technique complet</li>
+                            <li><i class="fas fa-check"></i> Analyse de la concurrence</li>
+                            <li><i class="fas fa-check"></i> Plan d'action détaillé</li>
+                            <li><i class="fas fa-check"></i> Optimisation on-page et off-page</li>
+                            <li><i class="fas fa-check"></i> Reporting mensuel détaillé</li>
+                            <li><i class="fas fa-check"></i> Support expert 3 mois</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <a href="calculator.html" class="btn btn-primary">Demander un devis spécifique</a>
+                </div>
+            </div>
+            
+            <!-- Service 5: Audit de Sécurité -->
+            <div class="service-detail animate-on-scroll" data-category="security" id="security">
+                <div class="service-header">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="service-title">
+                        <h2>Audit de Sécurité</h2>
+                        <p>Protection avancée contre les cybermenaces</p>
+                    </div>
+                    <div class="service-price">À partir de 2500€</div>
+                </div>
+                
+                <div class="service-content">
+                    <div class="service-problem">
+                        <h3><i class="fas fa-exclamation-circle"></i> Problème client</h3>
+                        <p>Dans un contexte où les cyberattaques se multiplient et deviennent de plus en plus sophistiquées, la sécurité de vos données et de votre infrastructure informatique est une préoccupation majeure. Vous vous interrogez sur la capacité de votre système à résister à des tentatives d’intrusion, au vol de données sensibles ou à des actes de malveillance qui pourraient impacter la continuité de votre activité.</p>
+                        <p>La complexité croissante des menaces et la diversité des points d’entrée potentiels rendent difficile la détection et la prévention des failles de sécurité. Vous souhaitez avoir une vision claire des vulnérabilités présentes dans votre organisation, comprendre les risques spécifiques à votre secteur et mettre en place des mesures de protection adaptées pour garantir la confidentialité, l’intégrité et la disponibilité de vos informations stratégiques.</p>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3><i class="fas fa-cogs"></i> Processus NovaTech</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="step-number">1</div>
+                                <h4>Évaluation</h4>
+                                <p>Analyse des vulnérabilités</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">2</div>
+                                <h4>Test d'intrusion</h4>
+                                <p>Simulation d'attaques contrôlées</p>
+                            </div>
+                            
+                            <div class="process-step">
+                                <div class="step-number">3</div>
+                                <h4>Recommandations</h4>
+                                <p>Plan de correction priorisé</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-number">4</div>
+                                <h4>Formation</h4>
+                                <p>Sensibilisation des équipes</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-features">
+                        <h3><i class="fas fa-star"></i> Avantages</h3>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Analyse complète des vulnérabilités</li>
+                            <li><i class="fas fa-check"></i> Test d'intrusion éthique</li>
+                            <li><i class="fas fa-check"></i> Rapport détaillé avec priorités</li>
+                            <li><i class="fas fa-check"></i> Plan de correction personnalisé</li>
+                            <li><i class="fas fa-check"></i> Formation des équipes</li>
+                            <li><i class="fas fa-check"></i> Audit de conformité RGPD</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <a href="calculator.html" class="btn btn-primary">Demander un devis spécifique</a>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- SERVICE PACKS -->
+    <section class="service-packs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Packs Services</h2>
+                <p>Bénéficiez de nos solutions groupées à prix avantageux pour une transformation digitale complète.</p>
+            </div>
+            
+            <div class="packs-grid">
+                <div class="pack-card animate-on-scroll">
+                    <div class="pack-badge">Économisez 10%</div>
+                    <div class="pack-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Pack "Lancement Digital"</h3>
+                    <div class="pack-price">2700€</div>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Site Vitrine 5 pages</li>
+                        <li><i class="fas fa-check"></i> Hébergement 1 an inclus</li>
+                        <li><i class="fas fa-check"></i> Nom de domaine 1 an</li>
+                        <li><i class="fas fa-check"></i> Certificat SSL</li>
+                        <li><i class="fas fa-check"></i> Audit SEO basique</li>
+                    </ul>
+                    <a href="calculator.html" class="btn btn-primary">Choisir ce pack</a>
+                </div>
+                
+                <div class="pack-card animate-on-scroll">
+                    <div class="pack-badge">Économisez 15%</div>
+                    <div class="pack-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Pack "Solution Complète"</h3>
+                    <div class="pack-price">10200€</div>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Site Vitrine 5 pages</li>
+                        <li><i class="fas fa-check"></i> Application Mobile</li>
+                        <li><i class="fas fa-check"></i> Hébergement VPS 1 an</li>
+                        <li><i class="fas fa-check"></i> Audit SEO avancé</li>
+                        <li><i class="fas fa-check"></i> Audit de sécurité</li>
+                    </ul>
+                    <a href="calculator.html" class="btn btn-primary">Choisir ce pack</a>
+                </div>
+                
+                <div class="pack-card animate-on-scroll">
+                    <div class="pack-badge">Sur mesure</div>
+                    <div class="pack-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Pack "Enterprise"</h3>
+                    <div class="pack-price">Sur devis</div>
+                    <ul class="pack-features">
+                        <li><i class="fas fa-check"></i> Solution complète sur mesure</li>
+                        <li><i class="fas fa-check"></i> Infrastructure cloud dédiée</li>
+                        <li><i class="fas fa-check"></i> Application mobile avancée</li>
+                        <li><i class="fas fa-check"></i> Support prioritaire 24/7</li>
+                        <li><i class="fas fa-check"></i> Formation équipe technique</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Prêt à transformer votre entreprise ?</h2>
+                <p>Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis personnalisé.</p>
+                <div>
+                    <a href="contact.html" class="btn btn-primary">Nous contacter</a>
+                    <a href="./test.html" class="btn btn-secondary">Calculateur de devis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">NovaTech</span>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Calculateur</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Développement Web</a></li>
+                        <li><a href="services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="services.html#seo">Référencement SEO</a></li>
+                        <li><a href="services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Filtrage des services par catégorie
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const services = document.querySelectorAll('.service-detail');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Ajouter la classe active au bouton cliqué
+                button.classList.add('active');
+                
+                // Récupérer la catégorie sélectionnée
+                const category = button.getAttribute('data-category');
+                
+                // Afficher ou masquer les services en fonction de la catégorie
+                services.forEach(service => {
+                    const serviceCategory = service.getAttribute('data-category');
+                    
+                    if (category === 'all' || category === serviceCategory) {
+                        service.style.display = 'block';
+                        setTimeout(() => {
+                            service.classList.add('is-visible');
+                        }, 10);
+                    } else {
+                        service.classList.remove('is-visible');
+                        setTimeout(() => {
+                            service.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/main.js"></script>
+    <style>
+        /* LEGAL HERO */
+        .legal-hero {
+            min-height: 30vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .legal-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(15, 60, 114, 0.4), rgba(2, 41, 119, 0.5)), 
+                url('./images/legal.jpg');
+            background-size: cover; /* Pour s'assurer que l'image couvre bien la zone */
+            background-position: center; /* Pour centrer l'image */
+            background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+            z-index: -1;
+        }
+
+        .legal-hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .legal-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .legal-hero p {
+            font-size: 1.2rem;
+            color: var(--gray-light);
+        }
+
+        /* LEGAL CONTENT */
+        .legal-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 3rem;
+        }
+
+        .legal-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-sidebar h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-nav {
+            list-style: none;
+        }
+
+        .legal-nav li {
+            margin-bottom: 0.8rem;
+        }
+
+        .legal-nav a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .legal-nav a:hover, .legal-nav a.active {
+            color: var(--primary);
+        }
+
+        .legal-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-section {
+            margin-bottom: 3rem;
+        }
+
+        .legal-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-section h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legal-section h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 1rem;
+        }
+
+        .legal-section p, .legal-section ul, .legal-section ol {
+            margin-bottom: 1rem;
+            color: var(--gray-light);
+        }
+
+        .legal-section ul, .legal-section ol {
+            padding-left: 1.5rem;
+        }
+
+        .legal-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            background: rgba(37, 99, 235, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin: 1.5rem 0;
+        }
+
+        .update-info {
+            font-style: italic;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* RESPONSIVE STYLES */
+        @media (max-width: 992px) {
+            .legal-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .legal-sidebar {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background: rgba(10, 10, 24, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .hamburger {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .legal-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .legal-content {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .legal-hero h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 0.7rem 1.5rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .legal-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="calculator.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="legal-hero">
+        <div class="container legal-hero-content">
+            <h1>Mentions Légales & Politique de Confidentialité</h1>
+            <p>Informations légales et politiques de protection des données de NovaTech</p>
+        </div>
+    </section>
+
+    <!-- Legal Content -->
+    <section class="section">
+        <div class="container">
+            <div class="legal-container">
+                <!-- Sidebar Navigation -->
+                <div class="legal-sidebar">
+                    <h3>Navigation</h3>
+                    <ul class="legal-nav">
+                        <li><a href="#mentions-legales" class="active">Mentions Légales</a></li>
+                        <li><a href="#politique-confidentialite">Politique de Confidentialité</a></li>
+                        <li><a href="#cookies">Politique des Cookies</a></li>
+                        <li><a href="#conditions-utilisation">Conditions d'Utilisation</a></li>
+                        <li><a href="#propriete-intellectuelle">Propriété Intellectuelle</a></li>
+                        <li><a href="#limitation-responsabilite">Limitation de Responsabilité</a></li>
+                    </ul>
+                </div>
+
+                <!-- Main Content -->
+                <div class="legal-content">
+                    <!-- Mentions Légales -->
+                    <div id="mentions-legales" class="legal-section">
+                        <h2>Mentions Légales</h2>
+                        
+                        <h3>Éditeur du site</h3>
+                        <p>Le site web <strong>novatech.fr</strong> est édité par :</p>
+                        <p>
+                            <strong>NovaTech SAS</strong><br>
+                            Société par Actions Simplifiée au capital de 50 000 €<br>
+                            RCS Paris 123 456 789<br>
+                            N° TVA intracommunautaire : FR 12 123456789<br>
+                            Siège social : 123 Avenue de l'Innovation, 75000 Paris, France
+                        </p>
+                        
+                        <h3>Directeur de la publication</h3>
+                        <p>Monsieur Marc Dubois, en qualité de Président de NovaTech SAS.</p>
+                        
+                        <h3>Hébergement</h3>
+                        <p>
+                            Le site est hébergé par :<br>
+                            <strong>OVH SAS</strong><br>
+                            2 rue Kellermann - 59100 Roubaix - France<br>
+                            Téléphone : +33 9 72 10 10 07
+                        </p>
+                        
+                        <h3>Contact</h3>
+                        <p>
+                            Téléphone : +33 1 23 45 67 89<br>
+                            Email : contact@novatech.fr
+                        </p>
+                    </div>
+
+                    <!-- Politique de Confidentialité -->
+                    <div id="politique-confidentialite" class="legal-section">
+                        <h2>Politique de Confidentialité</h2>
+                        <p class="update-info">Dernière mise à jour : 1er Juin 2023</p>
+                        
+                        <p>Chez NovaTech, nous accordons une grande importance à la protection de vos données personnelles et à votre vie privée. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons et quels sont vos droits.</p>
+                        
+                        <h3>1. Données que nous collectons</h3>
+                        <p>Nous pouvons collecter les données suivantes :</p>
+                        <ul>
+                            <li><strong>Données d'identification :</strong> Nom, prénom, adresse email, numéro de téléphone</li>
+                            <li><strong>Données professionnelles :</strong> Nom de l'entreprise, poste occupé</li>
+                            <li><strong>Données de navigation :</strong> Adresse IP, pages consultées, durée de visite</li>
+                            <li><strong>Données de projet :</strong> Informations relatives à vos projets et besoins</li>
+                        </ul>
+                        
+                        <h3>2. Finalités du traitement</h3>
+                        <p>Nous utilisons vos données pour :</p>
+                        <ul>
+                            <li>Répondre à vos demandes d'information</li>
+                            <li>Vous fournir nos services et réaliser nos prestations</li>
+                            <li>Vous envoyer des communications marketing (avec votre consentement)</li>
+                            <li>Améliorer nos services et notre site web</li>
+                            <li>Respecter nos obligations légales et réglementaires</li>
+                        </ul>
+                        
+                        <h3>3. Base juridique du traitement</h3>
+                        <p>Le traitement de vos données est basé sur :</p>
+                        <ul>
+                            <li>Votre consentement pour les communications marketing</li>
+                            <li>L'exécution d'un contrat pour la fourniture de nos services</li>
+                            <li>Notre intérêt légitime pour améliorer nos services</li>
+                            <li>Le respect d'obligations légales</li>
+                        </ul>
+                        
+                        <h3>4. Conservation des données</h3>
+                        <p>Nous conservons vos données :</p>
+                        <ul>
+                            <li>Pendant la durée de notre relation commerciale</li>
+                            <li>Pendant 3 ans après notre dernier contact pour les prospects</li>
+                            <li>Pendant la durée requise par les obligations légales et comptables</li>
+                        </ul>
+                        
+                        <h3>5. Partage des données</h3>
+                        <p>Vos données peuvent être partagées avec :</p>
+                        <ul>
+                            <li>Nos prestataires techniques (hébergeurs, outils de communication)</li>
+                            <li>Nos partenaires commerciaux (uniquement avec votre consentement)</li>
+                            <li>Les autorités légales (si requis par la loi)</li>
+                        </ul>
+                        
+                        <h3>6. Transferts en dehors de l'UE</h3>
+                        <p>Vos données sont principalement traitées dans l'Union Européenne. En cas de transfert en dehors de l'UE, nous nous assurons que des garanties appropriées sont mises en place.</p>
+                        
+                        <h3>7. Vos droits</h3>
+                        <p>Conformément au RGPD, vous disposez des droits suivants :</p>
+                        <ul>
+                            <li><strong>Droit d'accès :</strong> Obtenir la confirmation que des données vous concernant sont traitées</li>
+                            <li><strong>Droit de rectification :</strong> Faire corriger des données inexactes</li>
+                            <li><strong>Droit à l'effacement :</strong> Faire supprimer vos données sous certaines conditions</li>
+                            <li><strong>Droit à la limitation :</strong> Limiter le traitement de vos données</li>
+                            <li><strong>Droit d'opposition :</strong> Vous opposer au traitement pour des raisons légitimes</li>
+                            <li><strong>Droit à la portabilité :</strong> Recevoir vos données dans un format structuré</li>
+                        </ul>
+                        <p>Pour exercer ces droits, contactez-nous à : privacy@novatech.fr</p>
+                        
+                        <h3>8. Sécurité des données</h3>
+                        <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction.</p>
+                        
+                        <h3>9. Contact DPO</h3>
+                        <p>Notre Délégué à la Protection des Données (DPO) est joignable à : dpo@novatech.fr</p>
+                    </div>
+
+                    <!-- Politique des Cookies -->
+                    <div id="cookies" class="legal-section">
+                        <h2>Politique des Cookies</h2>
+                        
+                        <h3>Qu'est-ce qu'un cookie ?</h3>
+                        <p>Un cookie est un petit fichier texte déposé sur votre terminal lors de la visite d'un site. Il permet de conserver des informations relatives à votre navigation.</p>
+                        
+                        <h3>Cookies que nous utilisons</h3>
+                        <ul>
+                            <li><strong>Cookies essentiels :</strong> Nécessaires au fonctionnement du site</li>
+                            <li><strong>Cookies analytiques :</strong> Nous aident à comprendre comment les visiteurs interagissent avec le site</li>
+                            <li><strong>Cookies de préférences :</strong> Mémorisent vos choix et préférences</li>
+                            <li><strong>Cookies marketing :</strong> Utilisés pour vous proposer des publicités pertinentes</li>
+                        </ul>
+                        
+                        <h3>Gestion des cookies</h3>
+                        <p>Vous pouvez configurer votre navigateur pour refuser les cookies. Cependant, cela peut affecter le fonctionnement de certaines parties du site.</p>
+                        
+                        <div class="highlight">
+                            <p>En utilisant notre site, vous consentez à l'utilisation des cookies conformément à la présente politique. Vous pouvez retirer votre consentement à tout moment.</p>
+                        </div>
+                    </div>
+
+                    <!-- Conditions d'Utilisation -->
+                    <div id="conditions-utilisation" class="legal-section">
+                        <h2>Conditions Générales d'Utilisation</h2>
+                        
+                        <h3>1. Objet</h3>
+                        <p>Les présentes conditions régissent l'utilisation du site web novatech.fr et des services proposés par NovaTech.</p>
+                        
+                        <h3>2. Acceptation des conditions</h3>
+                        <p>L'utilisation de notre site implique l'acceptation pleine et entière des présentes conditions.</p>
+                        
+                        <h3>3. Services proposés</h3>
+                        <p>NovaTech propose des services de développement web, création d'applications mobiles, solutions cloud et conseil en transformation digitale.</p>
+                        
+                        <h3>4. Accès au site</h3>
+                        <p>Nous nous efforçons de maintenir l'accès au site, mais nous ne pouvons garantir un accès continu et sans interruption.</p>
+                        
+                        <h3>5. Comptes utilisateurs</h3>
+                        <p>Certains services peuvent nécessiter la création d'un compte. Vous êtes responsable de la confidentialité de vos identifiants.</p>
+                    </div>
+
+                    <!-- Propriété Intellectuelle -->
+                    <div id="propriete-intellectuelle" class="legal-section">
+                        <h2>Propriété Intellectuelle</h2>
+                        
+                        <h3>1. Contenu du site</h3>
+                        <p>Tous les éléments du site (textes, images, logos, marques, etc.) sont la propriété exclusive de NovaTech ou de ses partenaires et sont protégés par le droit de la propriété intellectuelle.</p>
+                        
+                        <h3>2. Utilisation du contenu</h3>
+                        <p>Toute reproduction, modification, distribution ou utilisation du contenu sans autorisation préalable est strictement interdite.</p>
+                        
+                        <h3>3. Contenu utilisateur</h3>
+                        <p>En soumettant du contenu sur notre site, vous accordez à NovaTech une licence non exclusive pour l'utiliser, le reproduire et le modifier.</p>
+                    </div>
+
+                    <!-- Limitation de Responsabilité -->
+                    <div id="limitation-responsabilite" class="legal-section">
+                        <h2>Limitation de Responsabilité</h2>
+                        
+                        <h3>1. Exactitude des informations</h3>
+                        <p>Nous nous efforçons de fournir des informations exactes et à jour, mais nous ne pouvons garantir l'exactitude complète de toutes les informations présentes sur le site.</p>
+                        
+                        <h3>2. Liens externes</h3>
+                        <p>Notre site peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables du contenu de ces sites ou des pratiques de confidentialité qu'ils adoptent.</p>
+                        
+                        <h3>3. Force majeure</h3>
+                        <p>Nous ne serons pas responsables des retards ou manquements résultant de circonstances indépendantes de notre volonté (force majeure).</p>
+                        
+                        <h3>4. Limitations</h3>
+                        <p>Dans la mesure permise par la loi, la responsabilité de NovaTech est limitée aux dommages directs et ne pourra excéder le montant payé pour le service concerné.</p>
+                    </div>
+
+                    <div class="update-info">
+                        <p>Nous nous réservons le droit de modifier les présentes mentions légales à tout moment. Les modifications prendront effet dès leur publication sur le site.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html"><span class="footer-logo">NovaTech</span></a>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./calculator.html">Calculateur</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="./services.html#web">Développement Web</a></li>
+                        <li><a href="./services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="./services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="./services.html#seo">Référencement SEO</a></li>
+                        <li><a href="./services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>    
+        // Navigation interne pour les sections légales
+        const legalNavLinks = document.querySelectorAll('.legal-nav a');
+        const legalSections = document.querySelectorAll('.legal-section');
+        
+        legalNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                // Mettre à jour la navigation
+                legalNavLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Scroll vers la section
+                window.scrollTo({
+                    top: targetSection.offsetTop - 120,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Observer les sections pour mettre à jour la navigation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    legalNavLinks.forEach(link => {
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        legalSections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

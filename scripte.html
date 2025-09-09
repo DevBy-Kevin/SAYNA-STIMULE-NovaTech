@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts Python - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/scripte.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="python-hero">
+        <div class="container python-hero-content">
+            <h1>Scripts Python NovaTech</h1>
+            <p>Découvrez nos outils Python développés en interne pour optimiser nos processus et offrir un service de qualité à nos clients.</p>
+        </div>
+    </section>
+
+    <!-- Scripts Section -->
+    <section class="section">
+        <div class="container">
+            <div class="scripts-container">
+                <!-- Script 1: Calculateur de Devis -->
+                <div class="script-card animate-on-scroll">
+                    <div class="script-header">
+                        <div class="script-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="script-title">
+                            <h2>Calculateur de Devis</h2>
+                            <p>Script de calcul automatique de devis pour projets digitaux</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-description">
+                        <p>Ce script permet d'estimer le coût d'un projet digital en fonction de ses caractéristiques : type de projet, complexité, design, fonctionnalités, etc.</p>
+                    </div>
+                    
+                    <div class="script-content">
+                        <div class="code-container">
+                            <pre><code>
+<span class="code-comment">#!/usr/bin/env python3</span>
+<span class="code-comment"># -*- coding: utf-8 -*-</span>
+
+<span class="code-comment">"""
+Calculateur de devis pour NovaTech
+Ce script calcule le prix d'un projet digital en fonction de ses caractéristiques
+"""</span>
+
+<span class="code-keyword">def</span> <span class="code-function">calculer_prix_projet</span>(type_projet, nb_pages, design, fonctionnalites, seo):
+    <span class="code-comment"># Prix de base selon le type de projet</span>
+    prix_base = {
+        <span class="code-string">'website'</span>: <span class="code-number">1500</span>,
+        <span class="code-string">'ecommerce'</span>: <span class="code-number">3500</span>,
+        <span class="code-string">'webapp'</span>: <span class="code-number">5000</span>,
+        <span class="code-string">'mobile'</span>: <span class="code-number">8500</span>,
+        <span class="code-string">'desktop'</span>: <span class="code-number">7000</span>
+    }
+    
+    <span class="code-comment"># Calcul du prix total</span>
+    total = prix_base.<span class="code-function">get</span>(type_projet, <span class="code-number">0</span>)
+    total += nb_pages * <span class="code-number">100</span>  <span class="code-comment"># 100€ par page</span>
+    total += (design - <span class="code-number">1</span>) * <span class="code-number">500</span>  <span class="code-comment"># Supplément design</span>
+    total += <span class="code-function">sum</span>(fonctionnalites)  <span class="code-comment"># Fonctionnalités supplémentaires</span>
+    total += seo  <span class="code-comment"># Option SEO</span>
+    
+    <span class="code-comment"># Application des remises pour les gros projets</span>
+    <span class="code-keyword">if</span> total > <span class="code-number">10000</span>:
+        total *= <span class="code-number">0.9</span>  <span class="code-comment"># 10% de remise</span>
+    <span class="code-keyword">elif</span> total > <span class="code-number">5000</span>:
+        total *= <span class="code-number">0.95</span>  <span class="code-comment"># 5% de remise</span>
+    
+    <span class="code-keyword">return</span> <span class="code-function">round</span>(total, <span class="code-number">2</span>)
+
+<span class="code-keyword">def</span> <span class="code-function">afficher_devis</span>(type_projet, nb_pages, design, fonctionnalites, seo, total):
+    <span class="code-comment"># Affichage formaté du devis</span>
+    print(<span class="code-string">f"\n=== DEVIS NOVATECH ==="</span>)
+    print(<span class="code-string">f"Type de projet: {type_projet}"</span>)
+    print(<span class="code-string">f"Nombre de pages: {nb_pages}"</span>)
+    print(<span class="code-string">f"Niveau de design: {design}"</span>)
+    print(<span class="code-string">f"Fonctionnalités: {len(fonctionnalites)} option(s)"</span>)
+    print(<span class="code-string">f"SEO: {seo}€"</span>)
+    print(<span class="code-string">f"-----------------------"</span>)
+    print(<span class="code-string">f"TOTAL: {total}€"</span>)
+    print(<span class="code-string">f"=======================\n"</span>)
+
+<span class="code-keyword">if</span> <span class="code-variable">__name__</span> == <span class="code-string">"__main__"</span>:
+    <span class="code-comment"># Exemple d'utilisation</span>
+    type_projet = <span class="code-string">"website"</span>
+    nb_pages = <span class="code-number">5</span>
+    design = <span class="code-number">1.5</span>  <span class="code-comment"># 1 = Basique, 1.5 = Personnalisé, 2 = Premium</span>
+    fonctionnalites = [<span class="code-number">500</span>, <span class="code-number">800</span>]  <span class="code-comment"># Formulaire de contact + Espace membre</span>
+    seo = <span class="code-number">300</span>  <span class="code-comment"># SEO Basique</span>
+    
+    total = calculer_prix_projet(type_projet, nb_pages, design, fonctionnalites, seo)
+    afficher_devis(type_projet, nb_pages, design, fonctionnalites, seo, total)
+                            </code></pre>
+                        </div>
+                        
+                        <div class="explanation">
+                            <h3><i class="fas fa-info-circle"></i> Explications</h3>
+                            <p>Ce script utilise une approche modulaire pour calculer le prix d'un projet digital :</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Prix de base</strong> selon le type de projet</li>
+                                <li><i class="fas fa-check"></i> <strong>Supplément par page</strong> (100€ par page)</li>
+                                <li><i class="fas fa-check"></i> <strong>Niveau de design</strong> (basique, personnalisé, premium)</li>
+                                <li><i class="fas fa-check"></i> <strong>Fonctionnalités supplémentaires</strong> avec coûts variables</li>
+                                <li><i class="fas fa-check"></i> <strong>Options SEO</strong> avec différents niveaux de tarification</li>
+                                <li><i class="fas fa-check"></i> <strong>Remises progressives</strong> pour les gros projets</li>
+                            </ul>
+                            <p>La fonction <code>afficher_devis()</code> formatte les résultats pour une présentation cliente professionnelle.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="execution-section">
+                        <h3><i class="fas fa-play-circle"></i> Tester le script</h3>
+                        <div class="form-group">
+                            <label for="project-type">Type de projet</label>
+                            <select id="project-type">
+                                <option value="website">Site Web (1500€)</option>
+                                <option value="ecommerce">E-commerce (3500€)</option>
+                                <option value="webapp">Application Web (5000€)</option>
+                                <option value="mobile">Application Mobile (8500€)</option>
+                                <option value="desktop">Application Desktop (7000€)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="page-count">Nombre de pages</label>
+                            <input type="number" id="page-count" min="1" max="50" value="5">
+                        </div>
+                        
+                        <button class="btn btn-primary" id="run-calculator">Exécuter le script</button>
+                        
+                        <div class="execution-output" id="calculator-output">
+                            <p>Le résultat s'affichera ici après exécution...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-actions">
+                        <a href="./scripts/calculateur_novatech.py" class="btn btn-primary"><i class="fas fa-download"></i> Télécharger le script</a>
+                        <a href="calculator.html" class="btn btn-secondary"><i class="fas fa-calculator"></i> Calculateur interactif</a>
+                    </div>
+                </div>
+                
+                <!-- Script 2: Générateur de Mots de Passe -->
+                <div class="script-card animate-on-scroll">
+                    <div class="script-header">
+                        <div class="script-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="script-title">
+                            <h2>Générateur de Mots de Passe</h2>
+                            <p>Outil de création de mots de passe sécurisés</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-description">
+                        <p>Ce script génère des mots de passe forts et sécurisés avec différentes options de complexité pour protéger les accès aux projets de nos clients.</p>
+                    </div>
+                    
+                    <div class="script-content">
+                        <div class="code-container">
+                            <pre><code>
+<span class="code-comment">#!/usr/bin/env python3</span>
+<span class="code-comment"># -*- coding: utf-8 -*-</span>
+
+<span class="code-comment">"""
+Générateur de mots de passe sécurisés pour NovaTech
+"""</span>
+
+<span class="code-keyword">import</span> random
+<span class="code-keyword">import</span> string
+
+<span class="code-keyword">def</span> <span class="code-function">generer_mot_de_passe</span>(longueur=<span class="code-number">12</span>, majuscules=<span class="code-keyword">True</span>, chiffres=<span class="code-keyword">True</span>, symboles=<span class="code-keyword">True</span>):
+    <span class="code-comment"># Caractères possibles</span>
+    caracteres = string.ascii_lowercase  <span class="code-comment"># Lettres minuscules</span>
+    
+    <span class="code-keyword">if</span> majuscules:
+        caracteres += string.ascii_uppercase  <span class="code-comment"># Lettres majuscules</span>
+    
+    <span class="code-keyword">if</span> chiffres:
+        caracteres += string.digits  <span class="code-comment"># Chiffres</span>
+    
+    <span class="code-keyword">if</span> symboles:
+        caracteres += string.punctuation  <span class="code-comment"># Symboles</span>
+    
+    <span class="code-comment"># Vérification de la longueur minimale</span>
+    <span class="code-keyword">if</span> longueur < <span class="code-number">8</span>:
+        print(<span class="code-string">"Attention : Un mot de passe de moins de 8 caractères n'est pas sécurisé !"</span>)
+        longueur = <span class="code-number">8</span>
+    
+    <span class="code-comment"># Génération du mot de passe</span>
+    mot_de_passe = <span class="code-string">''</span>.join(random.choice(caracteres) <span class="code-keyword">for</span> i <span class="code-keyword">in</span> range(longueur))
+    
+    <span class="code-keyword">return</span> mot_de_passe
+
+<span class="code-keyword">def</span> <span class="code-function">evaluer_force</span>(mot_de_passe):
+    <span class="code-comment"># Évaluation de la force du mot de passe</span>
+    score = <span class="code-number">0</span>
+    
+    <span class="code-keyword">if</span> len(mot_de_passe) >= <span class="code-number">12</span>:
+        score += <span class="code-number">2</span>
+    <span class="code-keyword">elif</span> len(mot_de_passe) >= <span class="code-number">8</span>:
+        score += <span class="code-number">1</span>
+    
+    <span class="code-keyword">if</span> any(c <span class="code-keyword">in</span> string.digits <span class="code-keyword">for</span> c <span class="code-keyword">in</span> mot_de_passe):
+        score += <span class="code-number">1</span>
+    
+    <span class="code-keyword">if</span> any(c <span class="code-keyword">in</span> string.punctuation <span class="code-keyword">for</span> c <span class="code-keyword">in</span> mot_de_passe):
+        score += <span class="code-number">1</span>
+    
+    <span class="code-keyword">if</span> any(c <span class="code-keyword">in</span> string.ascii_uppercase <span class="code-keyword">for</span> c <span class="code-keyword">in</span> mot_de_passe):
+        score += <span class="code-number">1</span>
+    
+    <span class="code-keyword">if</span> score == <span class="code-number">5</span>:
+        <span class="code-keyword">return</span> <span class="code-string">"Très fort"</span>
+    <span class="code-keyword">elif</span> score >= <span class="code-number">3</span>:
+        <span class="code-keyword">return</span> <span class="code-string">"Fort"</span>
+    <span class="code-keyword">elif</span> score >= <span class="code-number">2</span>:
+        <span class="code-keyword">return</span> <span class="code-string">"Moyen"</span>
+    <span class="code-keyword">else</span>:
+        <span class="code-keyword">return</span> <span class="code-string">"Faible"</span>
+
+<span class="code-keyword">if</span> <span class="code-variable">__name__</span> == <span class="code-string">"__main__"</span>:
+    <span class="code-comment"># Exemple d'utilisation</span>
+    print(<span class="code-string">"=== GÉNÉRATEUR DE MOTS DE PASSE NOVATECH ==="</span>)
+    
+    <span class="code-comment"># Génération de 3 mots de passe avec différentes complexités</span>
+    <span class="code-keyword">for</span> i <span class="code-keyword">in</span> range(<span class="code-number">3</span>):
+        mdp = generer_mot_de_passe(longueur=<span class="code-number">12</span>, majuscules=<span class="code-keyword">True</span>, chiffres=<span class="code-keyword">True</span>, symboles=<span class="code-keyword">True</span>)
+        force = evaluer_force(mdp)
+        print(<span class="code-string">f"Mot de passe {i+1}: {mdp} (Force: {force})"</span>)
+                            </code></pre>
+                        </div>
+                        
+                        <div class="explanation">
+                            <h3><i class="fas fa-info-circle"></i> Explications</h3>
+                            <p>Ce script génère des mots de passe sécurisés avec plusieurs fonctionnalités :</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Personnalisation de la longueur</strong> (8 caractères minimum)</li>
+                                <li><i class="fas fa-check"></i> <strong>Inclusion optionnelle</strong> de majuscules, chiffres et symboles</li>
+                                <li><i class="fas fa-check"></i> <strong>Évaluation de la force</strong> du mot de passe généré</li>
+                                <li><i class="fas fa-check"></i> <strong>Génération aléatoire sécurisée</strong> avec le module random</li>
+                            </ul>
+                            <p>L'algorithme évalue la force du mot de passe en fonction de :</p>
+                            <ul>
+                                <li><i class="fas fa-shield-alt"></i> Longueur du mot de passe</li>
+                                <li><i class="fas fa-shield-alt"></i> Présence de chiffres</li>
+                                <li><i class="fas fa-shield-alt"></i> Présence de symboles</li>
+                                <li><i class="fas fa-shield-alt"></i> Présence de majuscules</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="execution-section">
+                        <h3><i class="fas fa-play-circle"></i> Tester le script</h3>
+                        <div class="form-group">
+                            <label for="password-length">Longueur du mot de passe</label>
+                            <input type="number" id="password-length" min="8" max="20" value="12">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="include-uppercase" checked>
+                                Inclure des majuscules
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="include-digits" checked>
+                                Inclure des chiffres
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="include-symbols" checked>
+                                Inclure des symboles
+                            </label>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="run-password">Générer un mot de passe</button>
+                        
+                        <div class="execution-output" id="password-output">
+                            <p>Le résultat s'affichera ici après exécution...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-actions">
+                        <a href="./scripts/generateur_mdp.py" class="btn btn-primary"><i class="fas fa-download"></i> Télécharger le script</a>
+                    </div>
+                </div>
+                
+                <!-- Script 3: Analyseur de Sentiments -->
+                <div class="script-card animate-on-scroll">
+                    <div class="script-header">
+                        <div class="script-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="script-title">
+                            <h2>Analyseur de Sentiments</h2>
+                            <p>Outil d'analyse des sentiments des témoignages clients</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-description">
+                        <p>Ce script analyse les témoignages clients pour déterminer leur sentiment (positif, négatif ou neutre) et aide à améliorer notre service client.</p>
+                    </div>
+                    
+                    <div class="script-content">
+                        <div class="code-container">
+                            <pre><code>
+<span class="code-comment">#!/usr/bin/env python3</span>
+<span class="code-comment"># -*- coding: utf-8 -*-</span>
+
+<span class="code-comment">"""
+Analyseur de sentiments pour NovaTech
+Ce script analyse les témoignages clients pour déterminer leur ton (positif, négatif, neutre)
+"""</span>
+
+<span class="code-keyword">import</span> re
+
+<span class="code-keyword">class</span> <span class="code-function">AnalyseurSentiments</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        <span class="code-comment"># Mots-clés positifs et négatifs (simplifié pour l'exemple)</span>
+        self.mots_positifs = {
+            <span class="code-string">'excellent'</span>: <span class="code-number">2</span>, <span class="code-string">'super'</span>: <span class="code-number">2</span>, <span class="code-string">'génial'</span>: <span class="code-number">2</span>, <span class="code-string">'parfait'</span>: <span class="code-number">2</span>,
+            <span class="code-string">'bon'</span>: <span class="code-number">1</span>, <span class="code-string">'agréable'</span>: <span class="code-number">1</span>, <span class="code-string">'satisfait'</span>: <span class="code-number">1</span>, <span class="code-string">'rapide'</span>: <span class="code-number">1</span>,
+            <span class="code-string">'efficace'</span>: <span class="code-number">1</span>, <span class="code-string">'professionnel'</span>: <span class="code-number">1</span>, <span class="code-string">'qualité'</span>: <span class="code-number">1</span>, <span class="code-string">'recommande'</span>: <span class="code-number">2</span>
+        }
+        
+        self.mots_negatifs = {
+            <span class="code-string">'mauvais'</span>: <span class="code-number">2</span>, <span class="code-string">'horrible'</span>: <span class="code-number">2</span>, <span class="code-string">'nul'</span>: <span class="code-number">2</span>, <span class="code-string">'déçu'</span>: <span class="code-number">2</span>,
+            <span class="code-string">'lent'</span>: <span class="code-number">1</span>, <span class="code-string">'cher'</span>: <span class="code-number">1</span>, <span class="code-string">'compliqué'</span>: <span class="code-number">1</span>, <span class="code-string">'problème'</span>: <span class="code-number">1</span>,
+            <span class="code-string">'bug'</span>: <span class="code-number">1</span>, <span class="code-string">'erreur'</span>: <span class="code-number">1</span>, <span class="code-string">'insatisfait'</span>: <span class="code-number">2</span>, <span class="code-string">'déception'</span>: <span class="code-number">2</span>
+        }
+
+    <span class="code-keyword">def</span> <span class="code-function">analyser_texte</span>(self, texte):
+        <span class="code-comment"># Nettoyage du texte</span>
+        texte = texte.lower()
+        texte = re.sub(r'[^\w\s]', '', texte)  <span class="code-comment"># Supprimer la ponctuation</span>
+        
+        mots = texte.split()
+        
+        <span class="code-comment"># Calcul des scores</span>
+        score_positif = <span class="code-number">0</span>
+        score_negatif = <span class="code-number">0</span>
+        
+        <span class="code-keyword">for</span> mot <span class="code-keyword">in</span> mots:
+            <span class="code-keyword">if</span> mot <span class="code-keyword">in</span> self.mots_positifs:
+                score_positif += self.mots_positifs[mot]
+            <span class="code-keyword">if</span> mot <span class="code-keyword">in</span> self.mots_negatifs:
+                score_negatif += self.mots_negatifs[mot]
+        
+        <span class="code-comment"># Détermination du sentiment</span>
+        score_total = score_positif + score_negatif
+        
+        <span class="code-keyword">if</span> score_total == <span class="code-number">0</span>:
+            sentiment = <span class="code-string">"neutre"</span>
+            confiance = <span class="code-number">0</span>
+        <span class="code-keyword">else</span>:
+            ratio = score_positif / score_total <span class="code-keyword">if</span> score_total > <span class="code-number">0</span> <span class="code-keyword">else</span> <span class="code-number">0</span>
+            
+            <span class="code-keyword">if</span> ratio > <span class="code-number">0.6</span>:
+                sentiment = <span class="code-string">"positif"</span>
+            <span class="code-keyword">elif</span> ratio < <span class="code-number">0.4</span>:
+                sentiment = <span class="code-string">"négatif"</span>
+            <span class="code-keyword">else</span>:
+                sentiment = <span class="code-string">"neutre"</span>
+            
+            confiance = min(<span class="code-number">100</span>, abs(score_positif - score_negatif) * <span class="code-number">10</span>)
+        
+        <span class="code-keyword">return</span> {
+            <span class="code-string">"sentiment"</span>: sentiment,
+            <span class="code-string">"confiance"</span>: confiance,
+            <span class="code-string">"score_positif"</span>: score_positif,
+            <span class="code-string">"score_negatif"</span>: score_negatif
+        }
+
+<span class="code-keyword">def</span> <span class="code-function">afficher_resultat</span>(texte, resultat):
+    print(<span class="code-string">f"\n=== ANALYSE DE SENTIMENT ==="</span>)
+    print(<span class="code-string">f"Texte: \"{texte}\""</span>)
+    print(<span class="code-string">f"Sentiment: {resultat['sentiment']}"</span>)
+    print(<span class="code-string">f"Confiance: {resultat['confiance']}%"</span>)
+    print(<span class="code-string">f"Score positif: {resultat['score_positif']}"</span>)
+    print(<span class="code-string">f"Score négatif: {resultat['score_negatif']}"</span>)
+    print(<span class="code-string">f"============================\n"</span>)
+
+<span class="code-keyword">if</span> <span class="code-variable">__name__</span> == <span class="code-string">"__main__"</span>:
+    <span class="code-comment"># Exemple d'utilisation</span>
+    analyseur = AnalyseurSentiments()
+    
+    <span class="code-comment"># Textes de test</span>
+    textes = [
+        <span class="code-string">"Service excellent et équipe très professionnelle. Je recommande !"</span>,
+        <span class="code-string">"Déçu par la lenteur de réponse et les bugs rencontrés."</span>,
+        <span class="code-string">"Le produit est correct mais un peu cher pour ce que c'est."</span>
+    ]
+    
+    <span class="code-keyword">for</span> texte <span class="code-keyword">in</span> textes:
+        resultat = analyseur.analyser_texte(texte)
+        afficher_resultat(texte, resultat)
+                            </code></pre>
+                        </div>
+                        
+                        <div class="explanation">
+                            <h3><i class="fas fa-info-circle"></i> Explications</h3>
+                            <p>Ce script analyse le sentiment d'un texte en utilisant une approche par dictionnaire de mots-clés :</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> <strong>Dictionnaires de mots positifs et négatifs</strong> avec pondération</li>
+                                <li><i class="fas fa-check"></i> <strong>Nettoyage du texte</strong> (minuscules, suppression de la ponctuation)</li>
+                                <li><i class="fas fa-check"></i> <strong>Calcul de scores</strong> basé sur la présence des mots-clés</li>
+                                <li><i class="fas fa-check"></i> <strong>Détermination du sentiment</strong> (positif, négatif, neutre)</li>
+                                <li><i class="fas fa-check"></i> <strong>Niveau de confiance</strong> basé sur l'écart entre scores</li>
+                            </ul>
+                            <p>Les applications de ce script incluent :</p>
+                            <ul>
+                                <li><i class="fas fa-chart-line"></i> Analyse des témoignages clients</li>
+                                <li><i class="fas fa-chart-line"></i> Surveillance de la réputation en ligne</li>
+                                <li><i class="fas fa-chart-line"></i> Mesure de la satisfaction client</li>
+                                <li><i class="fas fa-chart-line"></i> Identification des points d'amélioration</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="execution-section">
+                        <h3><i class="fas fa-play-circle"></i> Tester le script</h3>
+                        <div class="form-group">
+                            <label for="sentiment-text">Entrez un texte à analyser</label>
+                            <textarea id="sentiment-text" placeholder="Ex: Service excellent et équipe très professionnelle. Je recommande !">Service excellent et équipe très professionnelle. Je recommande !</textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="run-sentiment">Analyser le sentiment</button>
+                        
+                        <div class="execution-output" id="sentiment-output">
+                            <p>Le résultat s'affichera ici après exécution...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script-actions">
+                        <a href="./scripts/analyseur_sentiments.py" class="btn btn-primary"><i class="fas fa-download"></i> Télécharger le script</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Téléchargements</h2>
+                <p>Accédez à tous nos scripts Python et ressources pour les utiliser localement.</p>
+            </div>
+            
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculateur de Devis</h3>
+                    <p>Script complet pour calculer des devis de projets digitaux avec toutes les fonctionnalités.</p>
+                    <a href="./scripts/calculateur_novatech.py" class="btn btn-primary">Télécharger</a>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Générateur de Mots de Passe</h3>
+                    <p>Outil pour créer des mots de passe sécurisés pour vos projets et applications.</p>
+                    <a href="./scripts/generateur_mdp.py" class="btn btn-primary">Télécharger</a>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Analyseur de Sentiments</h3>
+                    <p>Script d'analyse de sentiments pour les témoignages clients et les retours utilisateurs.</p>
+                    <a href="./scripts/analyseur_sentiments.py" class="btn btn-primary">Télécharger</a>
+                </div>
+                
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Guide Complet</h3>
+                    <p>Documentation détaillée pour installer et utiliser tous nos scripts Python.</p>
+                    <a href="./README.md" target="_blank" class="btn btn-primary">Télécharger</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">NovaTech</span>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Calculateur</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Développement Web</a></li>
+                        <li><a href="services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="services.html#seo">Référencement SEO</a></li>
+                        <li><a href="services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Exécution du script calculateur
+        const runCalculatorBtn = document.getElementById('run-calculator');
+        const calculatorOutput = document.getElementById('calculator-output');
+        
+        runCalculatorBtn.addEventListener('click', () => {
+            const projectType = document.getElementById('project-type').value;
+            const pageCount = parseInt(document.getElementById('page-count').value);
+            
+            // Simulation du calcul (similaire à la logique Python)
+            const basePrices = {
+                'website': 1500,
+                'ecommerce': 3500,
+                'webapp': 5000,
+                'mobile': 8500,
+                'desktop': 7000
+            };
+            
+            let total = basePrices[projectType] || 0;
+            total += pageCount * 100;
+            
+            // Application des remises
+            if (total > 10000) {
+                total *= 0.9; // 10% de remise
+            } else if (total > 5000) {
+                total *= 0.95; // 5% de remise
+            }
+            
+            total = Math.round(total);
+            
+            // Affichage du résultat
+            calculatorOutput.innerHTML = `
+                <p><span style="color: #6a9955;"># Exécution du script calculateur_novatech.py</span></p>
+                <p>=== DEVIS NOVATECH ===</p>
+                <p>Type de projet: ${projectType}</p>
+                <p>Nombre de pages: ${pageCount}</p>
+                <p>-----------------------</p>
+                <p><strong>TOTAL: ${total}€</strong></p>
+                <p>=======================</p>
+                <p><span style="color: #6a9955;"># Exécution terminée</span></p>
+            `;
+        });
+        
+        // Exécution du script générateur de mots de passe
+        const runPasswordBtn = document.getElementById('run-password');
+        const passwordOutput = document.getElementById('password-output');
+        
+        runPasswordBtn.addEventListener('click', () => {
+            const length = parseInt(document.getElementById('password-length').value);
+            const includeUppercase = document.getElementById('include-uppercase').checked;
+            const includeDigits = document.getElementById('include-digits').checked;
+            const includeSymbols = document.getElementById('include-symbols').checked;
+            
+            // Caractères possibles
+            let chars = 'abcdefghijklmnopqrstuvwxyz';
+            
+            if (includeUppercase) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            if (includeDigits) chars += '0123456789';
+            if (includeSymbols) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?';
+            
+            // Génération du mot de passe
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            
+            // Évaluation de la force
+            let strength = 'Faible';
+            if (length >= 12 && includeUppercase && includeDigits && includeSymbols) {
+                strength = 'Très fort';
+            } else if (length >= 10 && includeUppercase && includeDigits) {
+                strength = 'Fort';
+            } else if (length >= 8 && (includeUppercase || includeDigits)) {
+                strength = 'Moyen';
+            }
+            
+            // Affichage du résultat
+            passwordOutput.innerHTML = `
+                <p><span style="color: #6a9955;"># Exécution du script generateur_mdp.py</span></p>
+                <p>=== GÉNÉRATEUR DE MOTS DE PASSE NOVATECH ===</p>
+                <p>Votre mot de passe : <strong>${password}</strong></p>
+                <p>Force : <strong>${strength}</strong></p>
+                <p>Longueur : ${length} caractères</p>
+                <p>============================================</p>
+                <p><span style="color: #6a9955;"># Exécution terminée</span></p>
+            `;
+        });
+        
+        // Exécution du script analyseur de sentiments
+        const runSentimentBtn = document.getElementById('run-sentiment');
+        const sentimentOutput = document.getElementById('sentiment-output');
+        
+        runSentimentBtn.addEventListener('click', () => {
+            const text = document.getElementById('sentiment-text').value;
+            
+            // Mots-clés positifs et négatifs (simplifié)
+            const positiveWords = {
+                'excellent': 2, 'super': 2, 'génial': 2, 'parfait': 2,
+                'bon': 1, 'agréable': 1, 'satisfait': 1, 'rapide': 1,
+                'efficace': 1, 'professionnel': 1, 'qualité': 1, 'recommande': 2
+            };
+            
+            const negativeWords = {
+                'mauvais': 2, 'horrible': 2, 'nul': 2, 'déçu': 2,
+                'lent': 1, 'cher': 1, 'compliqué': 1, 'problème': 1,
+                'bug': 1, 'erreur': 1, 'insatisfait': 2, 'déception': 2
+            };
+            
+            // Nettoyage du texte
+            const cleanText = text.toLowerCase().replace(/[^\w\s]/g, '');
+            const words = cleanText.split(' ');
+            
+            // Calcul des scores
+            let positiveScore = 0;
+            let negativeScore = 0;
+            
+            words.forEach(word => {
+                if (positiveWords[word]) positiveScore += positiveWords[word];
+                if (negativeWords[word]) negativeScore += negativeWords[word];
+            });
+            
+            // Détermination du sentiment
+            let sentiment = 'neutre';
+            let confidence = 0;
+            
+            if (positiveScore + negativeScore > 0) {
+                const ratio = positiveScore / (positiveScore + negativeScore);
+                
+                if (ratio > 0.6) sentiment = 'positif';
+                else if (ratio < 0.4) sentiment = 'négatif';
+                
+                confidence = Math.min(100, Math.abs(positiveScore - negativeScore) * 10);
+            }
+            
+            // Affichage du résultat
+            sentimentOutput.innerHTML = `
+                <p><span style="color: #6a9955;"># Exécution du script analyseur_sentiments.py</span></p>
+                <p>=== ANALYSE DE SENTIMENT ===</p>
+                <p>Texte: "${text}"</p>
+                <p>Sentiment: <strong>${sentiment}</strong></p>
+                <p>Confiance: <strong>${confidence}%</strong></p>
+                <p>Score positif: ${positiveScore}</p>
+                <p>Score négatif: ${negativeScore}</p>
+                <p>============================</p>
+                <p><span style="color: #6a9955;"># Exécution terminée</span></p>
+            `;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NovaTech</title>
+    <link rel="shortcut icon" href="./images/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">NovaTech</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="calculator.html">Calculateur</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html" class="active">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container contact-hero-content">
+            <h1>Contactez-nous</h1>
+            <p>Une question, un projet ou besoin d'un devis ? Notre équipe est à votre écoute pour répondre à toutes vos demandes.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form animate-on-scroll">
+                    <h2>Envoyez-nous un message</h2>
+                    <p class="form-description">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Adresse email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Entreprise</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="support">Support technique</option>
+                                <option value="partnership">Partenariat</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="1000-5000">1 000€ - 5 000€</option>
+                                <option value="5000-10000">5 000€ - 10 000€</option>
+                                <option value="10000-20000">10 000€ - 20 000€</option>
+                                <option value="20000+">Plus de 20 000€</option>
+                                <option value="undefined">Non déterminé</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info animate-on-scroll">
+                    <h2>Informations de contact</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Adresse</h3>
+                            <p>123 Avenue de l'Innovation<br>75000 Paris, France</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Téléphone</h3>
+                            <p>+33 1 23 45 67 89</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>contact@novatech.fr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Horaires</h3>
+                            <p>Lun - Ven: 7h - 18h<br>Sam: 10h - 16h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-section animate-on-scroll">
+                <h2>Nous trouver</h2>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991624699569!2d2.2922926156740645!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e23%3A0x464b595b1e5a5135!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1625400000000!5m2!1sfr!2sfr"
+                            width="100%"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Questions fréquentes</h2>
+                <p>Retrouvez les réponses aux questions les plus courantes concernant nos services.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Quel est le délai moyen pour un projet de site web ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le délai moyen pour un site vitrine est de 4 à 6 semaines. Pour un site e-commerce ou une application web complexe, il faut compter entre 8 et 12 semaines. Ces délais peuvent varier en fonction de la complexité du projet et de la rapidité de validation des différentes étapes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Proposez-vous des services de maintenance après la livraison ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons différents packs de maintenance incluant mises à jour, sauvegardes, monitoring et support technique. Ces services sont optionnels et peuvent être souscrits mensuellement ou annuellement selon vos besoins.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Quelles technologies utilisez-vous pour le développement ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nous utilisons les technologies modernes et robustes comme React, Vue.js, Node.js, Python/Django, et les bases de données SQL et NoSQL selon les besoins du projet. Pour le mobile, nous privilégions React Native pour des applications cross-platform performantes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Comment se déroule le processus de collaboration ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Notre processus comprend 4 étapes principales : 1) Audit et analyse de vos besoins, 2) Conception et validation des maquettes, 3) Développement et tests, 4) Formation et livraison. Nous travaillons en méthodologie agile avec des points réguliers pour vous tenir informé de l'avancement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate-on-scroll">
+                    <div class="faq-question">
+                        <span>Proposez-vous l'hébergement des projets que vous développez ?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des solutions d'hébergement adaptées à chaque type de projet, allant de l'hébergement mutualisé aux serveurs dédiés et solutions cloud. Nous nous occupons de la mise en production et de la configuration technique pour vous garantir des performances optimales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <span class="footer-logo">NovaTech</span>
+                    <p>Solutions innovantes pour transformer votre entreprise à l'ère numérique.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#calculator">Calculateur</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="services.html#web">Développement Web</a></li>
+                        <li><a href="services.html#mobile">Applications Mobile</a></li>
+                        <li><a href="services.html#cloud">Solutions Cloud</a></li>
+                        <li><a href="services.html#seo">Référencement SEO</a></li>
+                        <li><a href="services.html#security">Sécurité Informatique</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation, 75000 Paris</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@novatech.fr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NovaTech. Tous droits réservés. | <a href="legal.html">Mentions légales</a> | <a href="legal.html#privacy">Politique de confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion du formulaire de contact
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Récupération des valeurs du formulaire
+            const formData = new FormData(contactForm);
+            const formValues = Object.fromEntries(formData.entries());
+            
+            // Simulation d'envoi (remplacer par un vrai envoi en production)
+            console.log('Données du formulaire:', formValues);
+            
+            // Affichage d'un message de confirmation
+            alert('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+            
+            // Réinitialisation du formulaire
+            contactForm.reset();
+        });
+        
+        // Gestion de la FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Fermer tous les autres items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Ouvrir/fermer l'item actuel
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
