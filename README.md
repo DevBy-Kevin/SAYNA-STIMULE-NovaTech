@@ -206,4 +206,5 @@ Ce projet est sous licence MIT. Vous êtes libre de l’utiliser, de le modifier
 👉 **Note :** N’oubliez pas de remplacer `votre-username` par votre véritable nom d’utilisateur GitHub dans les liens.
 
 ---
-Veux-tu que je te propose aussi une **version avec un style plus “startup moderne”** (ajout de badges GitHub, icônes dynamiques, liens vers issues/contributions, etc.) pour rendre ton README encore plus attractif ?
+
+## Consulter le rendu par ici : 
